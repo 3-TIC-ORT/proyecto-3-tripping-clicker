@@ -1,0 +1,38 @@
+.mainobjdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+.mainobj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 402px;
+    height: 329p;
+}
+.mnu{
+    background-color: #D9D9D9;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin: 0px;
+}
+.config{
+    background-color: #828282;
+    height: 9.5vh;
+    width: 14.5vw;
+}
+.configstats{
+    font-size: 3.7vh;
+}
+.puntosm{
+    height: 15vh;
+    width:30vw;
+    display: flex;
+    justify-content: left;
+    align-items: up;
+}
