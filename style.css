@@ -2,16 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
-    transform: translate(0px, -15vh );
+    height: 40vh;
+    width: 20vw;
+
     background-color: aqua;
+    transform: translate(40vw, 7.5vh );
 }
 .mainobj{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 402px;
-    height: 329p;
+    width: 30vw;
+    height: 40vh;
 }
 .mnu{
     background-color: #D9D9D9;
@@ -22,9 +24,12 @@
     align-items: center;
     transform: translate(20vw, -15vh );
 }
+
 body{
     margin: 0px;
+    overflow: hidden;
 }
+
 .config{
     background-color: #828282;
     height: 9.5vh;
