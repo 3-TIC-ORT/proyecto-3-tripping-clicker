@@ -27,16 +27,13 @@
 
 body{
     margin: 0px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .config{
     background-color: #828282;
     height: 9.5vh;
     width: 14.5vw;
-}
-.configstats{
-    font-size: 3.7vh;
 }
 .puntosm{
     height: 15vh;
@@ -45,4 +42,32 @@ body{
     justify-content: left;
     align-items: up;
     background-color: brown;
+}
+.mejoras2{
+    height: 70vh;
+    width: 10vw;
+    transform: translate(90vw, -125vh );
+    background-color: rgb(155, 148, 140);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.mejoras1{
+    height: 70vh;
+    width: 20vw;
+    transform: translate(80vw, -55vh );
+    background-color: rgb(112, 71, 18);
+    display: flex;
+    align-content: space-between;
+    justify-content: center ;
+}
+.mejoraclmn1{
+    width: 7.8vw;
+    height: 18.5vh;
+    background-color: crimson;
+}
+.mejoraclmn2{
+    width: 7.8vw;
+    height: 18.5vh;
+    background-color: crimson;
 }
