@@ -58,13 +58,16 @@ body{
     transform: translate(80vw, -55vh );
     background-color: rgb(112, 71, 18);
     display: flex;
-    align-content: space-between;
+    align-content: center;
     justify-content: center ;
 }
 .mejoraclmn1{
     width: 7.8vw;
     height: 18.5vh;
-    background-color: crimson;
+    background-color: rgb(92, 78, 81);
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 .mejoraclmn2{
     width: 7.8vw;
