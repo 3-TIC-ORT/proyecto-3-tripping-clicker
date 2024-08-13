@@ -27,7 +27,7 @@
 
 body{
     margin: 0px;
-    overflow: hidden; 
+    /* overflow: hidden; */
 }
 
 .config{
@@ -49,33 +49,38 @@ body{
     transform: translate(90vw, -125vh );
     background-color: rgb(155, 148, 140);
     display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 .mejoras1{
     height: 70vh;
-    width: 20vw;
+    width: 10vw;
     transform: translate(80vw, -55vh );
     background-color: rgb(112, 71, 18);
     display: flex;
-    align-content: center;
-    justify-content: center ;
+    justify-content: space-evenly;
+    flex-direction: column;
+
 }
 .mejoraclmn1{
     width: 7.8vw;
     height: 18.5vh;
     background-color: rgb(92, 78, 81);
-    display: flex;
     align-self: center;
-    justify-self: center;
 }
 .mejoraclmn2{
     width: 7.8vw;
     height: 18.5vh;
     background-color: crimson;
+    align-self: center;
 }
 .statsresumidas{
     background-color: rgb(38, 124, 143);
+    height: 15vh;
+    width: 15vw;
+}
+.ministats{
+    transform: translate(0vw, -1.6vh );
 }
 .ayuda{
     background-color: rgb(82, 10, 8);
@@ -88,4 +93,10 @@ body{
 }
 .logojuego{
     background-color: rgb(248, 128, 128);
+    width: 20vw;
+    height: 15vh;
+    transform: translate(80vw, -220.3vh );
+}
+.body{
+    height: 100vh;
 }
