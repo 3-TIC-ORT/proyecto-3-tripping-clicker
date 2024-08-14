@@ -1,6 +1,7 @@
 let puntos = 0
 let puntosxs = 0
 let poderclick = 1
+let precio1 = 10
 
 function maspuntos() {
     puntos = puntos + poderclick
@@ -9,9 +10,8 @@ function maspuntos() {
 
 function mejoraunoprecio(){
     if (puntos>=10) {
-        puntos = puntos-10
-        console.log (puntos,"puntos")
-        puntosxs = puntosxs+1
+        puntos = puntos - precio1
+        puntosxs = puntosxs + 1
         console.log (puntosxs, "pps")
     }
 }
