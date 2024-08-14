@@ -9,10 +9,6 @@ function maspuntos() {
 }
 
 function mejoraunoprecio(){
-    if (puntos>=10) {
-        puntos = puntos - precio1
-        puntosxs = puntosxs + 1
-        console.log (puntosxs, "pps")
     }
 }
 
@@ -32,6 +28,7 @@ bucleiinfinito()
 
 
 document.getElementById("mejora1").addEventListener("click",mejoraunoprecio)
+document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
 
 
 document.getElementById("mainobjdiv").addEventListener("click",maspuntos);
