@@ -13,7 +13,7 @@ function mejoraunoprecio() {
         puntos = puntos - precio1
         precio1 = precio1 + 10
         alert (`${precio1}`)
-        puntosxs = puntosxs + 1
+        puntosxs = puntosxs + 0.25 
     }
 }
 
@@ -25,7 +25,7 @@ while (true) {
 
     puntos = puntos + puntosxs
     console.log (puntos)
-    await delay(1000)
+    await delay(250)
     
 }
 }
