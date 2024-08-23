@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-3-tripping-clicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Back-end.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3-TIC-ORT/proyecto-3-tripping-clicker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3-TIC-ORT/proyecto-3-tripping-clicker/issues"
+  },
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tripping-clicker#readme",
+  "dependencies": {
+    "node-localstorage": "^3.0.5"
+  }
+}
