@@ -12,8 +12,8 @@ function mejoraunoprecio() {
     if (puntos >= precio1) {
         puntos = puntos - precio1
         precio1 = precio1 + 10
-        alert (`${precio1}`)
         puntosxs = puntosxs + 0.25 
+
     }
 }
 
