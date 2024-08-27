@@ -1,10 +1,11 @@
+import { guardarprogreso } from './'
+
+
 let puntosD = 0
 let puntosxs = 0
 let poderclick = 1
 let precio1 = 10
 let precio2 = 100
-
-import {guardarprogreso} from "./Back-end.js"
 
 function maspuntos() {
     puntosD = puntosD + poderclick
@@ -46,6 +47,6 @@ document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
 
 document.getElementById("mejora2").addEventListener("click",mejoradosprecio);
 
-document.getElementById("mainobjdiv").addEventListener("click",maspuntos);
+document.getElementById("mainobj").addEventListener("click",maspuntos);
 
 document.getElementById("guardar").addEventListener("click",)

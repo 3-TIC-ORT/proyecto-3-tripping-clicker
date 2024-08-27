@@ -16,3 +16,5 @@ localStorage.getItem("puntos",puntosD);
 localStorage.getItem("puntos por segundo",puntosxs);
 localStorage.getItem("precio mejora 1",precio1);
 localStorage.getItem("precio mejora 2",precio2);
+
+export { guardarprogreso }

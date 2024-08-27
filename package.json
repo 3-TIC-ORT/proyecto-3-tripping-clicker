@@ -1,7 +1,6 @@
 {
   "name": "proyecto-3-tripping-clicker",
   "version": "1.0.0",
-  "description": "",
   "main": "Back-end.js",
   "type": "module",
   "scripts": {
@@ -19,5 +18,7 @@
   "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tripping-clicker#readme",
   "dependencies": {
     "node-localstorage": "^3.0.5"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
