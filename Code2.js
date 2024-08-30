@@ -3,11 +3,14 @@ let puntosxs = 0
 let poderclick = 1
 let precio1 = 10
 let precio2 = 100
+let clicks = 0
+
 Cargarprogreso()
+
 
 function maspuntos() {
     puntosD = puntosD + poderclick
-    console.log (puntosD)
+    clicks = clicks + 1
 }
 
 function mejoraunoprecio() {
@@ -50,19 +53,29 @@ document.getElementById("mejora2").addEventListener("click",mejoradosprecio);
 document.getElementById("mainobj").addEventListener("click",maspuntos);
 
 document.getElementById("guardar").addEventListener("click",guardarprogreso);
+
+
+
+async function Autoguardado() {
+    await delay(300000)
+    document.addEventListener(guardarprogreso)
+}
+Autoguardado()
+
 // Guardar
 
 function guardarprogreso() { 
-    localStorage.setItem("puntos",puntosD);
-    localStorage.setItem("puntos por segundo",puntosxs);
-    localStorage.setItem("precio mejora 1",precio1);
-    localStorage.setItem("precio mejora 2",precio2);
+
+
 }
+
 
 //Importar
 async function Cargarprogreso () {
-    localStorage.getItem("puntos",puntosD);
-localStorage.getItem("puntos por segundo",puntosxs);
-localStorage.getItem("precio mejora 1",precio1);
-localStorage.getItem("precio mejora 2",precio2);
+
+}
+
+//Exportar
+function cargarprogreso () {
+
 }
