@@ -14,5 +14,12 @@ function guardarprogreso() {
 //Exportar
 
 function cargarprogreso () {
-    JSON.parse(fs.readFileSync(`./Datos/Guardado.json`,"utf8"));
+    let progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`,"utf8"));
+    return progreso
 }
+
+onEvent(`1`,guardarprogreso)
+
+onEvent(`2`,cargarprogreso)
+
+startServer()
