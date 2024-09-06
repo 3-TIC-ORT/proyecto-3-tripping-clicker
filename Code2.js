@@ -10,7 +10,7 @@ let clicks = 0
 function maspuntos() {
     puntosD = puntosD + poderclick
     clicks = clicks + 1
-    document.getElementById("Puntos").innerHTML = `Puntos: ${Math.ceil (puntosD)}`
+    document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
 }
 
 function mejoraunoprecio() {
