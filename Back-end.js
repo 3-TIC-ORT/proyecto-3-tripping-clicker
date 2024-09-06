@@ -1,3 +1,5 @@
+import fs from "fs"
+
 // Guardar
 function guardarprogreso() {
     const guardado = {
