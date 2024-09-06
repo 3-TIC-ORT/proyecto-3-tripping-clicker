@@ -13,6 +13,7 @@ function guardarprogreso() {
 }
 
 //Exportar
+
 function cargarprogreso () {
     JSON.parse(fs.readFileSync(`./Datos/Guardado.json`,"utf8"));
 }
