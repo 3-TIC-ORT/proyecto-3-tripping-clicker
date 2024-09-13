@@ -1,8 +1,3 @@
-let puntos = 0
-let puntosxs = 0
-let poderclick = 1
-let precio1 = 10
-
 function maspuntos() {
     puntos = puntos + poderclick
     console.log (puntos)

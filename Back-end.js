@@ -1,6 +1,7 @@
 import fs from "fs"
 
 // Guardar
+
 function guardarprogreso() {
     const guardado = {
         "puntos": puntosD,
@@ -14,7 +15,7 @@ function guardarprogreso() {
 //Exportar
 
 function cargarprogreso () {
-    let progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`,"utf8"));
+    let progreso = JSON.parse(fs.readFleSync(`./Datos/Guardado.json`,"utf8"));
     return progreso
 }
 
