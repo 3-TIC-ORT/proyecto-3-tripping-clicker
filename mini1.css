@@ -1,0 +1,15 @@
+@keyframes estrellas{
+    0%{
+        display: none; 
+        width: 0px; 
+        height: 0px;
+    } 100%
+    {display: block; 
+        width: 60PX; 
+        height: 60PX; 
+        background-color: aquamarine;
+    }
+}
+.animacion {
+    animation: estrellas 10s infinite;
+}
