@@ -4,6 +4,7 @@ let poderclick = 1
 let precio1 = 10
 let precio2 = 100
 let clicks = 0
+let dimension = 1
 
 
 
