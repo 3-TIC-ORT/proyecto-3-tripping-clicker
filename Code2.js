@@ -15,7 +15,7 @@ function maspuntos() {
     puntosD = puntosD + poderclick
     puntosT = puntosT + poderclick
     clicks = clicks + 1
-    document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     document.getElementById("clicksTotales").innerHTML = `Clicks totales: ${clicks}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
 }
@@ -25,7 +25,7 @@ function mejoraunoprecio() {
         puntosD = puntosD - precio1
         precio1 = precio1 * 1.25
         puntosxs = puntosxs + 0.05
-        document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 
@@ -34,7 +34,7 @@ function mejoradosprecio() {
         puntosD = puntosD - precio2
         precio2 = precio2 * 1.25
         puntosxs = puntosxs + 0.5
-        document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 function mejoratresprecio() {
@@ -42,7 +42,7 @@ function mejoratresprecio() {
         puntosD = puntosD - precio3
         precio3 = precio3 * 1.25
         puntosxs = puntosxs + 5
-        document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 function mejoracuatroprecio() {
@@ -50,7 +50,7 @@ function mejoracuatroprecio() {
         puntosD = puntosD - precio4
         precio4 = precio4 * 1.25
         puntosxs = puntosxs + 50
-        document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 
@@ -64,7 +64,7 @@ async function bucleinfinito(){
         puntosD = puntosD + puntosxs
         puntosT = puntosT + puntosxs
         puntosD = (puntosD)
-        document.getElementById("Puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `puntos: ${Math.floor (puntosD)}`
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
         await delay(500)     
         console.log (puntosD)
