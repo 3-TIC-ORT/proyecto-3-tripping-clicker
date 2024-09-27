@@ -1,4 +1,5 @@
 import fs from "fs"
+import {onEvent, startServer} from "soquetic"
 
 // Guardar
 function guardarprogreso(dimension,puntosD,puntosxs,precio1,precio2,clicks,poderclick) {
@@ -21,6 +22,8 @@ function guardarprogreso(dimension,puntosD,puntosxs,precio1,precio2,clicks,poder
                 "puntos por segundo": puntosxs,
                 "mejora 1": precio1,
                 "mejora 2": precio2,
+                "clicks": clicks,
+                "poderclick": poderclick,
             }
             fs.writeFileSync(`./Datos/Guardado2.json`,JSON.stringify(guardado2,null,2)`utf8`);
     }
@@ -31,6 +34,8 @@ function guardarprogreso(dimension,puntosD,puntosxs,precio1,precio2,clicks,poder
             "puntos por segundo": puntosxs,
             "mejora 1": precio1,
             "mejora 2": precio2,
+            "clicks": clicks,
+            "poderclick": poderclick,
         }
         fs.writeFileSync(`./Datos/Guardado3.json`,JSON.stringify(guardado3,null,2)`utf8`);
     }
@@ -61,7 +66,7 @@ function cargarprogreso (dimension) {
         alert("hiciste algo mal (pt 2)")
     }
 }
-
+ 
 onEvent(`guardar`,guardarprogreso)
 
 onEvent(`cargar`,cargarprogreso)
