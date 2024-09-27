@@ -60,17 +60,33 @@ function delay(timeInMs) {
 
 async function bucleinfinito(){
     while (true) {
-
         puntosD = puntosD + puntosxs
         puntosT = puntosT + puntosxs
         puntosD = (puntosD)
         document.getElementById("puntos").innerHTML = `puntos: ${Math.floor (puntosD)}`
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
         await delay(500)     
-        console.log (puntosD)
-        
+        console.log (puntosD)     
+    }}
+    
+    function numselect(){
+        let num = Math.floor(Math.random() * 3) + 1;
+    }
+
+    function cambio(){
+    while (true) {
+        await delay(900000)
+        numselect()
+        if (num === dimension) {
+            numselect()
+        }else{
+            dimension = num
+        }
     }
 }
+
+
+cambio()
 bucleinfinito()
 
 document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
