@@ -1,7 +1,8 @@
 import fs from "fs"
+import {onEvent, startServer} from "soquetic"
 
 // Guardar
-function guardarprogreso() {
+function guardarprogreso(dimension,puntosD,puntosxs,precio1,precio2,clicks,poderclick) {
     // Guardar progreso de la dimensión 1
     if (dimension = 1) {
         const guardado = {
@@ -9,6 +10,8 @@ function guardarprogreso() {
             "puntos por segundo": puntosxs,
             "mejora 1": precio1,
             "mejora 2": precio2,
+            "clicks": clicks,
+            "poderclick": poderclick,
         }
         fs.writeFileSync(`./Datos/Guardado.json`,JSON.stringify(guardado,null,2)`utf8`);
     }
@@ -19,6 +22,8 @@ function guardarprogreso() {
                 "puntos por segundo": puntosxs,
                 "mejora 1": precio1,
                 "mejora 2": precio2,
+                "clicks": clicks,
+                "poderclick": poderclick,
             }
             fs.writeFileSync(`./Datos/Guardado2.json`,JSON.stringify(guardado2,null,2)`utf8`);
     }
@@ -29,6 +34,8 @@ function guardarprogreso() {
             "puntos por segundo": puntosxs,
             "mejora 1": precio1,
             "mejora 2": precio2,
+            "clicks": clicks,
+            "poderclick": poderclick,
         }
         fs.writeFileSync(`./Datos/Guardado3.json`,JSON.stringify(guardado3,null,2)`utf8`);
     }
@@ -39,7 +46,7 @@ function guardarprogreso() {
 
 //Exportar
 
-function cargarprogreso () {
+function cargarprogreso (dimension) {
     // Cargar progreso de la dimensión 1
     if (dimension = 1) {
         let progreso = JSON.parse(fs.readFleSync(`./Datos/Guardado.json`,"utf8"));
@@ -59,7 +66,7 @@ function cargarprogreso () {
         alert("hiciste algo mal (pt 2)")
     }
 }
-
+ 
 onEvent(`guardar`,guardarprogreso)
 
 onEvent(`cargar`,cargarprogreso)
