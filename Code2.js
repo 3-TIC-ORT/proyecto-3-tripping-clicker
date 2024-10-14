@@ -71,6 +71,7 @@ async function bucleinfinito(){
     
     function numselect(){
         let num = Math.floor(Math.random() * 3) + 1;
+        return num
     }
 
     function cambio(){

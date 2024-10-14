@@ -2,14 +2,17 @@ import fs from "fs";
 import { onEvent, startServer } from "soquetic";
 
 // Guardar
-function guardarprogreso(dimension, puntosD, puntosxs, precio1, precio2, clicks, poderclick) {
+function guardarprogreso(dimension, puntosD, puntosT, puntosxs, precio1, precio2, precio3, precio4, clicks, poderclick) {
     // Guardar progreso de la dimensión 1
     if (dimension === 1) {
         const guardado = {
             "puntos": puntosD,
+            "puntosTot": puntosT,
             "puntos por segundo": puntosxs,
-            "mejora 1": precio1,
-            "mejora 2": precio2,
+            "mejora1": precio1,
+            "mejora2": precio2,
+            "mejora3": precio3,
+            "mejora4": precio4,
             "clicks": clicks,
             "poderclick": poderclick,
         };
@@ -19,9 +22,12 @@ function guardarprogreso(dimension, puntosD, puntosxs, precio1, precio2, clicks,
     else if (dimension === 2) {
         const guardado2 = {
             "puntos": puntosD,
+            "puntosTot": puntosT,
             "puntos por segundo": puntosxs,
-            "mejora 1": precio1,
-            "mejora 2": precio2,
+            "mejora1": precio1,
+            "mejora2": precio2,
+            "mejora3": precio3,
+            "mejora4": precio4,
             "clicks": clicks,
             "poderclick": poderclick,
         };
@@ -31,15 +37,18 @@ function guardarprogreso(dimension, puntosD, puntosxs, precio1, precio2, clicks,
     else if (dimension === 3) {
         const guardado3 = {
             "puntos": puntosD,
+            "puntosTot": puntosT,
             "puntos por segundo": puntosxs,
-            "mejora 1": precio1,
-            "mejora 2": precio2,
+            "mejora1": precio1,
+            "mejora2": precio2,
+            "mejora3": precio3,
+            "mejora4": precio4,
             "clicks": clicks,
             "poderclick": poderclick,
         };
         fs.writeFileSync(`./Datos/Guardado3.json`, JSON.stringify(guardado3, null, 2), "utf8");
     } else {
-        console.error("hiciste algo mal");
+        console.error("Hubo un error en el guardado");
     }
 }
 
@@ -60,7 +69,7 @@ function cargarprogreso(dimension) {
         let progreso3 = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
         return progreso3;
     } else {
-        console.error("hiciste algo mal (pt 2)");
+        console.error("Hubo un error en el cargado");
     }
 }
 
