@@ -8,7 +8,7 @@ function guardarprogreso(dimension, puntosD, puntosT, puntosxs, precio1, precio2
         const guardado = {
             "puntos": puntosD,
             "puntosTot": puntosT,
-            "puntos por segundo": puntosxs,
+            "puntosXsegundo": puntosxs,
             "mejora1": precio1,
             "mejora2": precio2,
             "mejora3": precio3,
@@ -21,30 +21,30 @@ function guardarprogreso(dimension, puntosD, puntosT, puntosxs, precio1, precio2
     // Guardar progreso de la dimensión 2
     else if (dimension === 2) {
         const guardado2 = {
-            "puntos": puntosD,
-            "puntosTot": puntosT,
-            "puntos por segundo": puntosxs,
-            "mejora1": precio1,
-            "mejora2": precio2,
-            "mejora3": precio3,
-            "mejora4": precio4,
-            "clicks": clicks,
-            "poderclick": poderclick,
+            "puntos2": puntosD,
+            "puntosTot2": puntosT,
+            "puntosXsegundo2": puntosxs,
+            "mejora12": precio1,
+            "mejora22": precio2,
+            "mejora32": precio3,
+            "mejora42": precio4,
+            "clicks2": clicks,
+            "poderclick2": poderclick,
         };
         fs.writeFileSync(`./Datos/Guardado2.json`, JSON.stringify(guardado2, null, 2), "utf8");
     }
     // Guardar progreso de la dimensión 3
     else if (dimension === 3) {
         const guardado3 = {
-            "puntos": puntosD,
-            "puntosTot": puntosT,
-            "puntos por segundo": puntosxs,
-            "mejora1": precio1,
-            "mejora2": precio2,
-            "mejora3": precio3,
-            "mejora4": precio4,
-            "clicks": clicks,
-            "poderclick": poderclick,
+            "puntos3": puntosD,
+            "puntosTot3": puntosT,
+            "puntosXsegundo3": puntosxs,
+            "mejora13": precio1,
+            "mejora23": precio2,
+            "mejora33": precio3,
+            "mejora43": precio4,
+            "clicks3": clicks,
+            "poderclick3": poderclick,
         };
         fs.writeFileSync(`./Datos/Guardado3.json`, JSON.stringify(guardado3, null, 2), "utf8");
     } else {
