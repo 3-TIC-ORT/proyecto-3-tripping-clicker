@@ -61,26 +61,28 @@ body{
 
     .logonombre{
         background-color: chartreuse;
-        width: 20%;
+        width: 15%;
         height: 100%;
     }
 
 .medio{
     background-color: black;
-    height: 75%;
+    height: 85%;
     width: 100%;
     display: flex;
 }
 
-    .vacio{
-        background-color: darkviolet;
-        width: 20%;
+    .centrar{
+        width: 15%;
         height: 100%;
+    }
+    .fondo{
+        height: 100%;
+        width: 567%;
     }
 
     .mainobj{
-        background-color: orangered;
-        width: 60%;
+        width: 70%;
         height: 100%;
         display: flex;
         align-items: center;
@@ -94,11 +96,17 @@ body{
             .mainbutton{
                 height: 100%;
                 width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0);
+                border-color: rgba(255, 255, 255, 0);
+                
             }
 
     .columna{
         height: 100%;
-        width:  20%;
+        width:  15%;
         display: flex;
         flex-direction: column;
     }
@@ -131,14 +139,6 @@ body{
         flex-direction: column;
     }
 
-
-.abajo{
-    background-color: chocolate;
-    height: 10%;
-    width: 100%;
-    border-width: 0px;
-    align-self: flex-end;
-}
 .mejoradiv{
     height: 25%;
     width: 50%;
@@ -146,4 +146,9 @@ body{
 .mejora{
     width: 100%;
     height: 100%;
+}
+.mainimg{
+    height: 300%;
+    aspect-ratio: 1-1;
+    border-color: rgba(255, 255, 255, 0);
 }
