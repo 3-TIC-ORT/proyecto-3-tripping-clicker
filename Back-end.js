@@ -57,20 +57,24 @@ function cargarprogreso(dimension) {
     // Cargar progreso de la dimensión 1
     if (dimension === 1) {
         let progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`, "utf8"));
-        return progreso;
+        console.log("cargado progreso")
+        return progreso
     }
     // Cargar progreso de la dimensión 2
     else if (dimension === 2) {
         let progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
-        return progreso;
+        console.log("cargado progreso 2")
+        return progreso
     }
     // Cargar progreso de la dimensión 3
     else if (dimension === 3) {
         let progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
-        return progreso;
+        console.log("cargado progreso 3")
+        return progreso
     } else {
         console.error("Hubo un error en el cargado");
     }
+    return progreso
 }
 
 onEvent(`guardar`, guardarprogreso);
