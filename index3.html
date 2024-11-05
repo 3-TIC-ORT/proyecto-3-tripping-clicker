@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trippin clicker</title>
     <link rel="stylesheet" href="style3.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=Lexend:wght@100..900&family=Rubik+Doodle+Triangles&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <div class="arriba">
+    <img src="./assets/menuarriba.png" class="menuimg">
 
     <div class="contadorPMD"><p class="contador1txt">Contador pts Multidimensionales</p></div>
     <div class="mnu">
-        <div class="ayuda"><p class="ayudatxt">ayuda</p></div>
+        <button class="ayuda"><p class="ayudatxt">ayuda</p></button>
         <button id="guardar" class="guardar"><p class="guardartxt">guardar</p></button>
         </div>
     <div class="mnu2">
@@ -24,14 +28,24 @@
         <p id="puntosT" class="statsminitxt">Puntos totales: 0</p>
         <p id="clicksTotales" class="statsminitxt">Clicks totales: 0</p>
     </div>
-    <div class="logonombre"><p class="logo">logo y nombre del juego</p></div> 
+    <div class="logonombre"><p class="logo">logo y nombre del juego</p>
+        <img src="./assets/upgmnuimg.png" class="upgmnuimg">
+    
+    </div> 
 </div>    
 
 <div class="medio">
-    <div class="centrar"><img src="./assets/fondodm3.PNG" alt="fondo" class="fondo"></div>
+    <div class="centrar">
+        <img src="./assets/fondodm3.PNG" alt="fondo" class="fondo">
+        <div class="constelacion"></div>
+    </div>
+    
     <div class="mainobj">
-        <p id="puntos"></p>
-        <div class="mainbuttondiv"><button class="mainbutton" id="mainobj"><img src="./assets/Objeto principal 3 V2.png" alt="objeto princicpal" class="mainimg"></button></div>
+        <p id="puntos" class="puntos"></p>
+        <div class="mainbuttondiv" id="mainbuttondiv"><button class="mainbutton" id="mainobj"><img src="./assets/Objeto principal 3.png" alt="objeto princicpal" class="mainimg"></button></div>
+        <img src="./assets/Objeto principal 3 shadow.png" class="shadow">
+        <img src="./assets/edificio.png" alt="edificio" class="edificio">
+
     </div>
     <div class="columna">
         <div class="mejoras">    

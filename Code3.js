@@ -65,26 +65,42 @@ async function bucleinfinito(){
         puntosD = (puntosD)
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
-        await delay(500)     
-        console.log (puntosD)     
+        await delay(500)          
     }}
-
+    let num
     function numselect(){
-        let num = Math.floor(Math.random() * 3) + 1;
+        num = Math.floor(Math.random() * 3) + 1;
     }
 
     async function cambio(){
     while (true) {
-        await delay(900000)
+        await delay(90)
         numselect()
         if (num === dimension) {
             numselect()
         }else{
             dimension = num;
+            console.log (dimension)
         }
     }
 }
 
+const mainImg = document.querySelector('.mainimg');
+let imgSize = 60;
+
+mainImg.style.width = imgSize + '%';
+
+document.getElementById('mainobj').addEventListener('mousedown', () => {
+    imgSize -= 1;
+    if (imgSize > 0) {
+        mainImg.style.width = imgSize + '%';
+    }
+});
+
+document.getElementById('mainobj').addEventListener('mouseup', () => {
+    imgSize = 60;
+    mainImg.style.width = imgSize + '%';
+});
 
 cambio()
 bucleinfinito()
