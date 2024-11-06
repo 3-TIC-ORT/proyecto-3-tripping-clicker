@@ -132,6 +132,29 @@ document.getElementById('mainobj').addEventListener('mouseup', () => {
 cambio()
 bucleinfinito()
 
+function cargado(){
+    postData(`cargar`, {dimension}, (progreso) => {
+    puntosD3 = progreso.puntosD3
+    puntosT = progreso.puntosTot
+    puntosxs = progreso.puntosXsegundo
+    precio1 = progreso.precio1
+    precio2 = progreso.precio2
+    precio3 = progreso.precio3
+    precio4 = progreso.precio4
+    clicks = progreso.clicks
+    poderclick = progreso.poderclick
+
+    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD}`
+    });
+}
+
+function guardado() {
+    postData(`guardar`,{dimension, puntosD3, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
+}
+
+document.getElementById("import").addEventListener("click", cargado)
+
+document.getElementById("guardar").addEventListener("click", guardado)
 
 document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
 
