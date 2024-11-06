@@ -1,56 +1,59 @@
-let puntosD = 0
 let puntosT = 0
 let puntosxs = 0
 let poderclick = 1
-let precio1 = 10
+let precio1  = 10
 let precio2 = 100
 let precio3 = 1000
 let precio4 = 10000
 let clicks = 0
-let dimension = 1
-
+let dimension = 3
+let puntosD3 = 0
+let puntosD1
+let puntosd2
 
 
 function maspuntos() {
-    puntosD = puntosD + poderclick
+    puntosD3 = puntosD3 + poderclick
     puntosT = puntosT + poderclick
     clicks = clicks + 1
-    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
     document.getElementById("clicksTotales").innerHTML = `Clicks totales: ${clicks}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
 }
 
 function mejoraunoprecio() {
-    if (puntosD >= precio1) {
-        puntosD = puntosD - precio1
+    if (puntosD3 >= precio1) {
+        puntosD3 = puntosD3 - precio1
         precio1 = precio1 * 1.25
         puntosxs = puntosxs + 0.05
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
     }
 }
 
 function mejoradosprecio() {
-    if (puntosD >= precio2) {
-        puntosD = puntosD - precio2
+    if (puntosD3 >= precio2) {
+        puntosD3 = puntosD3 - precio2
+        poderclick = poderclick + 0.5
         precio2 = precio2 * 1.25
         puntosxs = puntosxs + 0.5
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
     }
 }
 function mejoratresprecio() {
-    if (puntosD >= precio3) {
-        puntosD = puntosD - precio3
+    if (puntosD3 >= precio3) {
+        puntosD3 = puntosD3 - precio3
+        poderclick = poderclick
         precio3 = precio3 * 1.25
         puntosxs = puntosxs + 5
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
     }
 }
 function mejoracuatroprecio() {
-    if (puntosD >= precio4) {
-        puntosD = puntosD - precio4
+    if (puntosD3 >= precio4) {
+        puntosD3 = puntosD3 - precio4
         precio4 = precio4 * 1.25
         puntosxs = puntosxs + 50
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
     }
 }
 
@@ -60,10 +63,10 @@ function delay(timeInMs) {
 
 async function bucleinfinito(){
     while (true) {
-        puntosD = puntosD + puntosxs
+        puntosD3 = puntosD3 + puntosxs
         puntosT = puntosT + puntosxs
-        puntosD = (puntosD)
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        puntosD3 = (puntosD3)
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
         await delay(500)          
     }}
@@ -74,16 +77,40 @@ async function bucleinfinito(){
 
     async function cambio(){
     while (true) {
-        await delay(90)
+        await delay(900000)
         numselect()
         if (num === dimension) {
             numselect()
         }else{
             dimension = num;
-            console.log (dimension)
+            guardar()
+            await delay(10000)
+            window.location.href=`index${num}.html`
         }
     }
 }
+
+const showstats = document.getElementById("stats");
+        const span = document.getElementsByClassName("close")[0];
+
+
+        statsshow.innerHTML = mensaje;
+        statsmnu.style.display = "block";
+
+
+    span.onclick = function() {
+        statsmnu.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+        if (event.target == statsmnu) {
+            statsmnu.style.display = "none";
+        }
+    }
+    
+
+
 
 const mainImg = document.querySelector('.mainimg');
 let imgSize = 60;
@@ -107,8 +134,6 @@ bucleinfinito()
 
 
 document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
-
-
 
 document.getElementById("mejora2").addEventListener("click",mejoradosprecio);
 
