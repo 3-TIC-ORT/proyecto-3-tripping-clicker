@@ -90,24 +90,24 @@ async function bucleinfinito(){
     }
 }
 
-const showstats = document.getElementById("stats");
+document.getElementById("stats").addEventListener('click', ()=>{
+        const showstats = document.getElementById("statsmnu");
         const span = document.getElementsByClassName("close")[0];
 
-
-        statsshow.innerHTML = mensaje;
-        statsmnu.style.display = "block";
+        showstats.style.display = "block";
 
 
     span.onclick = function() {
-        statsmnu.style.display = "none";
+        showstats.style.display = "none";
     }
 
 
     window.onclick = function(event) {
         if (event.target == statsmnu) {
-            statsmnu.style.display = "none";
+            showstats.style.display = "none";
         }
     }
+})
     
 
 
