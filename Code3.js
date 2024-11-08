@@ -134,7 +134,7 @@ bucleinfinito()
 
 function cargado(){
     postData(`cargar`, {dimension}, (progreso) => {
-    puntosD3 = progreso.puntosD3
+    puntosD3 = math.floor(progreso.puntosD3)
     puntosT = progreso.puntosTot
     puntosxs = progreso.puntosXsegundo
     precio1 = progreso.precio1
@@ -144,7 +144,7 @@ function cargado(){
     clicks = progreso.clicks
     poderclick = progreso.poderclick
 
-    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD3}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${math.floor(progreso.puntosD3)}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
     document.getElementById("").innerHTML = `${progreso.puntosTot}`
     document.getElementById("").innerHTML = `${progreso.puntosXsegundo}`

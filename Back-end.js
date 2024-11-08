@@ -11,12 +11,12 @@ onEvent(`guardar`, (data) => {
             "puntosD": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
-            "precio1": precio1,
-            "precio2": precio2,
-            "precio3": precio3,
-            "precio4": precio4,
-            "clicks": clicks,
-            "poderclick": poderclick,
+            "precio1": data.precio1,
+            "precio2": data.precio2,
+            "precio3": data.precio3,
+            "precio4": data.precio4,
+            "clicks": data.clicks,
+            "poderclick": data.poderclick,
 
         }; 
         fs.writeFileSync(`./Datos/Guardado.json`, JSON.stringify(guardado, null, 2), "utf8");
@@ -28,12 +28,12 @@ onEvent(`guardar`, (data) => {
             "puntosD": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
-            "precio1": precio1,
-            "precio2": precio2,
-            "precio3": precio3,
-            "precio4": precio4,
-            "clicks": clicks,
-            "poderclick": poderclick,
+            "precio1": data.precio1,
+            "precio2": data.precio2,
+            "precio3": data.precio3,
+            "precio4": data.precio4,
+            "clicks": data.clicks,
+            "poderclick": data.poderclick,
         };
         fs.writeFileSync(`./Datos/Guardado2.json`, JSON.stringify(guardado2, null, 2), "utf8");
     }
@@ -43,14 +43,14 @@ onEvent(`guardar`, (data) => {
             "puntosD": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
-            "precio1": precio1,
-            "precio2": precio2,
-            "precio3": precio3,
-            "precio4": precio4,
-            "clicks": clicks,
-            "poderclick": poderclick,
+            "precio1": data.precio1,
+            "precio2": data.precio2,
+            "precio3": data.precio3,
+            "precio4": data.precio4,
+            "clicks": data.clicks,
+            "poderclick": data.poderclick,
         };
-        fs.writeFileSync(`./Datos/Guardado3.json`, JSON.stringify(guardado3, null, 2), "utf8")
+        fs.writeFileSync(`./Datos/Guardado3.json`, JSON.stringify(guardado3, null, 2), "utf8");
     } 
     
     else {
