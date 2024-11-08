@@ -141,7 +141,16 @@ function cargado(){
     clicks = progreso.clicks
     poderclick = progreso.poderclick
 
-    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD3}`
+    // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
+    document.getElementById("").innerHTML = `${progreso.puntosTot}`
+    document.getElementById("").innerHTML = `${progreso.puntosXsegundo}`
+    document.getElementById("").innerHTML = `${progreso.precio1}`
+    document.getElementById("").innerHTML = `${progreso.precio2}`
+    document.getElementById("").innerHTML = `${progreso.precio3}`
+    document.getElementById("").innerHTML = `${progreso.precio4}`
+    document.getElementById("").innerHTML = `${progreso.clicks}`
+    document.getElementById("").innerHTML = `${progreso.poderclick}`
     });
 }
 
@@ -153,14 +162,14 @@ sacar()
 
 document.getElementById("import").addEventListener("click", cargado)
 
-document.getElementById("guardar").addEventListener("click", guardado)
+document.getElementById("guardar").addEventListener("click", guardado);
 
-document.getElementById("mejora1").addEventListener("click",mejoraunoprecio);
+document.getElementById("mejora1").addEventListener("click", mejoraunoprecio);
 
-document.getElementById("mejora2").addEventListener("click",mejoradosprecio);
+document.getElementById("mejora2").addEventListener("click", mejoradosprecio);
 
-document.getElementById("mejora3").addEventListener("click",mejoratresprecio);
+document.getElementById("mejora3").addEventListener("click", mejoratresprecio);
 
-document.getElementById("mejora4").addEventListener("click",mejoracuatroprecio);
+document.getElementById("mejora4").addEventListener("click", mejoracuatroprecio);
 
-document.getElementById("mainobj").addEventListener("click",maspuntos);
+document.getElementById("mainobj").addEventListener("click", maspuntos);
