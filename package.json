@@ -18,7 +18,7 @@
   "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tripping-clicker#readme",
   "dependencies": {
     "node-localstorage": "^3.0.5",
-    "soquetic": "^1.1.1"
+    "soquetic": "^1.2.6"
   },
   "keywords": [],
   "description": ""

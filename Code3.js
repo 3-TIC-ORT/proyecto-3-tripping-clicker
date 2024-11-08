@@ -12,6 +12,7 @@ let puntosD1
 let puntosd2
 
 
+
 function maspuntos() {
     puntosD3 = puntosD3 + poderclick
     puntosT = puntosT + poderclick
@@ -90,27 +91,23 @@ async function bucleinfinito(){
     }
 }
 
-document.getElementById("stats").addEventListener('click', ()=>{
-        const showstats = document.getElementById("statsmnu");
-        const span = document.getElementsByClassName("close")[0];
+const showstats = document.getElementById("statsmnu");
+document.getElementById("stats").addEventListener('click', poner)
+function poner(){
+    showstats.style.display = "block";
+}
+const span = document.getElementsByClassName("close")[0];
+span.addEventListener('click', sacar)
+function sacar() {
+    showstats.style.display = "none";
+}
 
-        showstats.style.display = "block";
-
-
-    span.onclick = function() {
+window.addEventListener('click', holaaa)
+function holaaa(event) {
+    if (event.target == statsmnu) {
         showstats.style.display = "none";
     }
-
-
-    window.onclick = function(event) {
-        if (event.target == statsmnu) {
-            showstats.style.display = "none";
-        }
-    }
-})
-    
-
-
+}
 
 const mainImg = document.querySelector('.mainimg');
 let imgSize = 60;
@@ -151,6 +148,8 @@ function cargado(){
 function guardado() {
     postData(`guardar`,{dimension, puntosD3, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
+
+sacar()
 
 document.getElementById("import").addEventListener("click", cargado)
 
