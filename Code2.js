@@ -7,7 +7,7 @@ let precio2 = 100
 let precio3 = 1000
 let precio4 = 10000
 let clicks = 0
-let dimension = 1
+let dimension = 3
 
 
 
