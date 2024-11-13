@@ -8,7 +8,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 1
     if (data.dimension === 1) {
         const guardado = {
-            "puntosD": data.puntosD3,
+            "puntosD3": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
             "precio1": data.precio1,
@@ -25,7 +25,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 2
     else if (data.dimension === 2) {
         const guardado2 = {
-            "puntosD": data.puntosD3,
+            "puntosD3": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
             "precio1": data.precio1,
@@ -40,7 +40,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 3
     else if (data.dimension === 3) {
         const guardado3 = {
-            "puntosD": data.puntosD3,
+            "puntosD3": data.puntosD3,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
             "precio1": data.precio1,
@@ -59,8 +59,14 @@ onEvent(`guardar`, (data) => {
 });
 
 // Exportar
-onEvent(`cargar`, (data) => {
+onEvent("cargar", (data) => {
     // Cargar progreso de la dimensión 1
+    console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
+    console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
+    console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
+    console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
+    console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
+
     if (data.dimension === 1) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`, "utf8"));
         return progreso
@@ -73,11 +79,13 @@ onEvent(`cargar`, (data) => {
     // Cargar progreso de la dimensión 3
     else if (data.dimension === 3) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
+        console.log(`ProgrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeso cargado`);
         return progreso
     } else {
         console.error("Hubo un error en el cargado");
     }
-    return progreso
+
+    return progreso;
 });
 
 startServer();
