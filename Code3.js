@@ -130,28 +130,24 @@ document.getElementById('mainobj').addEventListener('mouseup', () => {
 cambio()
 bucleinfinito()
 
-function cargado(){
-    postData(`cargar`, {dimension}, (progreso) => {
-    puntosD = progreso.puntosD
-    puntosT = progreso.puntosTot
-    puntosxs = progreso.puntosXsegundo
-    precio1 = progreso.precio1
-    precio2 = progreso.precio2
-    precio3 = progreso.precio3
-    precio4 = progreso.precio4
-    clicks = progreso.clicks
-    poderclick = progreso.poderclick
+async function cargado(){
+    await postData("cargar", {dimension}, (data) => {
+    console.log(data);
+    console.log(data.puntosD3);
+    puntosD3 = data.puntosD3;
+    puntosT = data.puntosTot;
+    puntosxs = data.puntosXsegundo;
+    precio1 = data.precio1;
+    precio2 = data.precio2;
+    precio3 = data.precio3;
+    precio4 = data.precio4;
+    clicks = data.clicks;
+    poderclick = data.poderclick;
+    console.log(data);
 
-    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${data.puntosD3}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
-    document.getElementById("").innerHTML = `${progreso.puntosTot}`
-    document.getElementById("").innerHTML = `${progreso.puntosXsegundo}`
-    document.getElementById("").innerHTML = `${progreso.precio1}`
-    document.getElementById("").innerHTML = `${progreso.precio2}`
-    document.getElementById("").innerHTML = `${progreso.precio3}`
-    document.getElementById("").innerHTML = `${progreso.precio4}`
-    document.getElementById("").innerHTML = `${progreso.clicks}`
-    document.getElementById("").innerHTML = `${progreso.poderclick}`
+  
     });
 }
 
@@ -161,7 +157,7 @@ function guardado() {
 
 
 
-document.getElementById("import").addEventListener("click", cargado)
+document.getElementById("import").addEventListener("click", cargado);
 
 document.getElementById("guardar").addEventListener("click", guardado);
 
