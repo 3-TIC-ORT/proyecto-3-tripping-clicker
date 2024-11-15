@@ -7,54 +7,52 @@ let precio3 = 1000
 let precio4 = 10000
 let clicks = 0
 let dimension = 3
-let puntosD3 = 0
-let puntosD1
-let puntosd2
+let puntosD = 0
 
 
 
 function maspuntos() {
-    puntosD3 = puntosD3 + poderclick
+    puntosD = puntosD + poderclick
     puntosT = puntosT + poderclick
     clicks = clicks + 1
-    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     document.getElementById("clicksTotales").innerHTML = `Clicks totales: ${clicks}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
 }
 
 function mejoraunoprecio() {
-    if (puntosD3 >= precio1) {
-        puntosD3 = puntosD3 - precio1
+    if (puntosD >= precio1) {
+        puntosD = puntosD - precio1
         precio1 = precio1 * 1.25
         puntosxs = puntosxs + 0.05
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 
 function mejoradosprecio() {
-    if (puntosD3 >= precio2) {
-        puntosD3 = puntosD3 - precio2
+    if (puntosD >= precio2) {
+        puntosD = puntosD - precio2
         poderclick = poderclick + 0.5
         precio2 = precio2 * 1.25
         puntosxs = puntosxs + 0.5
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 function mejoratresprecio() {
-    if (puntosD3 >= precio3) {
-        puntosD3 = puntosD3 - precio3
+    if (puntosD >= precio3) {
+        puntosD = puntosD - precio3
         poderclick = poderclick
         precio3 = precio3 * 1.25
         puntosxs = puntosxs + 5
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 function mejoracuatroprecio() {
-    if (puntosD3 >= precio4) {
-        puntosD3 = puntosD3 - precio4
+    if (puntosD >= precio4) {
+        puntosD = puntosD - precio4
         precio4 = precio4 * 1.25
         puntosxs = puntosxs + 50
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     }
 }
 
@@ -64,10 +62,10 @@ function delay(timeInMs) {
 
 async function bucleinfinito(){
     while (true) {
-        puntosD3 = puntosD3 + puntosxs
+        puntosD = puntosD + puntosxs
         puntosT = puntosT + puntosxs
-        puntosD3 = (puntosD3)
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD3)}`
+        puntosD = (puntosD)
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
         await delay(500)          
     }}
@@ -85,8 +83,9 @@ async function bucleinfinito(){
         }else{
             dimension = num;
             guardar()
-            await delay(10000)
+            await delay(3000)
             window.location.href=`index${num}.html`
+            cargado()
         }
     }
 }
@@ -102,12 +101,14 @@ function sacar() {
     showstats.style.display = "none";
 }
 
-window.addEventListener('click', holaaa)
-function holaaa(event) {
+window.addEventListener('click', hola)
+function hola(event) {
     if (event.target == statsmnu) {
         showstats.style.display = "none";
     }
 }
+
+sacar()
 
 const mainImg = document.querySelector('.mainimg');
 let imgSize = 60;
@@ -131,7 +132,7 @@ bucleinfinito()
 
 function cargado(){
     postData(`cargar`, {dimension}, (progreso) => {
-    puntosD3 = progreso.puntosD3
+    puntosD = progreso.puntosD
     puntosT = progreso.puntosTot
     puntosxs = progreso.puntosXsegundo
     precio1 = progreso.precio1
@@ -141,7 +142,7 @@ function cargado(){
     clicks = progreso.clicks
     poderclick = progreso.poderclick
 
-    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD3}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${progreso.puntosD}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
     document.getElementById("").innerHTML = `${progreso.puntosTot}`
     document.getElementById("").innerHTML = `${progreso.puntosXsegundo}`
@@ -155,10 +156,10 @@ function cargado(){
 }
 
 function guardado() {
-    postData(`guardar`,{dimension, puntosD3, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
+    postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
-sacar()
+
 
 document.getElementById("import").addEventListener("click", cargado)
 

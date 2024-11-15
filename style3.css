@@ -38,18 +38,8 @@ button{
         display: flex;
         flex-direction: column;
         align-items:center;
-        justify-content: space-around;
+        justify-content: space-evenly;        
     }
-
-    .mnu2{
-        width: 22.5%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-
     .mnubutton{
         height: 30%;
         width: 80%;
@@ -57,7 +47,7 @@ button{
         justify-content: center;
         align-items: center;
         background-color: #61187B;
-        margin-top: 3vh;
+        
 
     }
     .statsmnu {
@@ -87,9 +77,16 @@ button{
         overflow: hidden;
         
     }
+    .statsdiv{
+        background-color: #782094;
+        height: 10%;
+        width: 10%;
+        position: absolute;
+        align-self: center;
+    }
     
     .closediv{
-        margin-top: 71.5vh;
+        margin-top: 74vh;
         margin-left: 39.55vw;
         width: 10.5vw;
         height: 6vh;
@@ -123,7 +120,7 @@ button{
 
     .upgmnuimg{
         width: 15.115%;
-        height: 120%;
+        height: 101%;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -185,6 +182,7 @@ button{
         height: 100%;
         display: flex;
         align-self: flex-end;
+        align-content: flex-start;
     }
  
     .menumejoras1{
