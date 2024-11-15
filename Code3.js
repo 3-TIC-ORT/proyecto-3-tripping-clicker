@@ -130,11 +130,10 @@ document.getElementById('mainobj').addEventListener('mouseup', () => {
 cambio()
 bucleinfinito()
 
-async function cargado(){
-    await postData("cargar", {dimension}, (data) => {
-    console.log(data);
-    console.log(data.puntosD3);
-    puntosD3 = data.puntosD3;
+function cargado(){
+    postData("cargar", {dimension}, (data) => {
+    console.log(data)
+    puntosD = data.puntosD;
     puntosT = data.puntosTot;
     puntosxs = data.puntosXsegundo;
     precio1 = data.precio1;
@@ -143,9 +142,8 @@ async function cargado(){
     precio4 = data.precio4;
     clicks = data.clicks;
     poderclick = data.poderclick;
-    console.log(data);
 
-    document.getElementById("puntos").innerHTML = `Puntos: ${data.puntosD3}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${data.puntosD}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
   
     });
@@ -170,3 +168,5 @@ document.getElementById("mejora3").addEventListener("click", mejoratresprecio);
 document.getElementById("mejora4").addEventListener("click", mejoracuatroprecio);
 
 document.getElementById("mainobj").addEventListener("click", maspuntos);
+
+connect2Server()
