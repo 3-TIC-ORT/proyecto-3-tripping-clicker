@@ -116,16 +116,19 @@ button{
 
     }
 
-    .logonombre{
-        width: 15%;
-        height: 100%;
-
+    .nombre{
+        position: absolute;
     }
 
-    .upgmnuimg{
-        width: 15.115%;
-        height: 101%;
+    .logonombre{
+        width: 15%;
+        height: 15%;
         position: absolute;
+    }
+
+    .bimg{
+        height: 100%;
+        width: 15vw;
         top: 0;
         z-index: -1;
     }
@@ -209,7 +212,7 @@ button{
     }
 
 .mejoradiv{
-    height: 32%;
+    height: 27%;
     width: 90%;
 }
 .mejora{

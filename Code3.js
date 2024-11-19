@@ -17,6 +17,7 @@ function maspuntos() {
     clicks = clicks + 1
     document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
+    console. log ("pijaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 }
 
 function mejoraunoprecio() {
@@ -73,11 +74,10 @@ async function bucleinfinito(){
         puntosT = puntosT + puntosxs
         puntosD = (puntosD)
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`   
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
         document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
         document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
-        document.getElementById("PXS").innerHTML = `Poder del click: ${puntosxs}`
+        document.getElementById("PXS").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
         await delay(500)          
     }}
     let num
@@ -96,7 +96,6 @@ async function bucleinfinito(){
             guardar()
             await delay(3000)
             window.location.href=`index${num}.html`
-            cargado()
         }
     }
 }
