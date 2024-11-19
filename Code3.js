@@ -73,7 +73,11 @@ async function bucleinfinito(){
         puntosT = puntosT + puntosxs
         puntosD = (puntosD)
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`   
         document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
+        document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
+        document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
+        document.getElementById("PXS").innerHTML = `Poder del click: ${puntosxs}`
         await delay(500)          
     }}
     let num
@@ -160,15 +164,8 @@ function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
-function update(){
-    document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
-    document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
-    document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
-    document.getElementById("PXS").innerHTML = `Poder del click: ${puntosxs}`
 
-}
 
-document.getElementById("stats").addEventListener('click', update)
 
 document.getElementById("import").addEventListener("click", cargado);
 
