@@ -16,7 +16,6 @@ function maspuntos() {
     puntosT = puntosT + poderclick
     clicks = clicks + 1
     document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-    document.getElementById("clicksTotales").innerHTML = `Clicks totales: ${clicks}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
 }
 
@@ -26,6 +25,8 @@ function mejoraunoprecio() {
         precio1 = precio1 * 1.25
         puntosxs = puntosxs + 0.05
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 
@@ -36,6 +37,8 @@ function mejoradosprecio() {
         precio2 = precio2 * 1.25
         puntosxs = puntosxs + 0.5
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 function mejoratresprecio() {
@@ -45,6 +48,8 @@ function mejoratresprecio() {
         precio3 = precio3 * 1.25
         puntosxs = puntosxs + 5
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 function mejoracuatroprecio() {
@@ -53,6 +58,8 @@ function mejoracuatroprecio() {
         precio4 = precio4 * 1.25
         puntosxs = puntosxs + 50
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 
@@ -153,7 +160,15 @@ function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
+function update(){
+    document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
+    document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
+    document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
+    document.getElementById("PXS").innerHTML = `Poder del click: ${puntosxs}`
 
+}
+
+document.getElementById("stats").addEventListener('click', update)
 
 document.getElementById("import").addEventListener("click", cargado);
 

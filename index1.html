@@ -5,33 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trippin clicker</title>
-    <link rel="stylesheet" href="style1.css"/>
+    <link rel="stylesheet" href="style3.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=Lexend:wght@100..900&family=Rubik+Doodle+Triangles&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <div class="arriba">
+    <img src="./assets/menuarriba.png" class="menuimg">
 
     <div class="contadorPMD"><p class="contador1txt">Contador pts Multidimensionales</p></div>
     <div class="mnu">
-        <div class="ayuda"><p class="ayudatxt">ayuda</p></div>
-        <button id="guardar" class="guardar"><p class="guardartxt">guardar</p></button>
-        </div>
-    <div class="mnu2">
-        <div class="config"><p class="configtxt">configuracion y estadisticas</p></div>
+        <button class="mnubutton"><p class="exportartxt">Exportar Progreso</p></button>
+        <button id="guardar" class="mnubutton"><p class="guardartxt">Guardar Progreso</p></button>
+    </div>
+    <div class="mnu">
+        <button class="mnubutton" id="import"><p class="importartxt">Importar Progreso</p></button>
+        <button class="mnubutton" id="stats"><p class="statstxt">Estadisticas</p></button>
     </div>
     <div class="statsmini">
         <p class="statsminitxt">EESTADISTICAS RESUMIDAS</p>
-        <p id="puntosT" class="statsminitxt">Puntos totales: 0</p>
-        <p id="clicksTotales" class="statsminitxt">Clicks totales: 0</p>
+        <p id="pxs" class="statsminitxt">Puntos por segundo: 0</p>
+        <p id="poder" class="statsminitxt">Poder del click: 1</p>
     </div>
-    <div class="logonombre"><p class="logo">logo y nombre del juego</p></div> 
+    <div class="logonombre"><p class="logo">logo y nombre del juego</p>
+        <img src="./assets/upgmnuimg.png" class="upgmnuimg">
+    
+    </div> 
 </div>    
 
 <div class="medio">
-    <div class="vacio"></div>
+    <div class="centrar">
+        <img src="./assets/fondodm3.PNG" alt="fondo" class="fondo">
+        <div class="constelacion"></div>
+    </div>
+    
     <div class="mainobj">
-        <p id="puntos"></p>
-        <div class="mainbuttondiv"><button class="mainbutton" id="mainobj">objeto principal</button></div>
+        <p id="puntos" class="puntos"></p>
+        <div class="mainbuttondiv" id="mainbuttondiv"><button class="mainbutton" id="mainobj"><img src="./assets/Objeto principal 3.png" alt="objeto princicpal" class="mainimg"></button></div>
+        <img src="./assets/Objeto principal 3 shadow.png" class="shadow">
+        <img src="./assets/edificio.png" alt="edificio" class="edificio">
+
     </div>
     <div class="columna">
         <div class="mejoras">    
@@ -48,11 +63,23 @@
     </div>
 </div>
 </div>
-<button class="abajo" onclick="location.href = 'mini1.html'">
+<div id="statsmnu" class="statsmnu">
+    <div class="statsmnu-content">
+        <div class="statsdiv">
+        <p class="stat" id="puntosT"></p>
+        <p class="stat" id="clicksT"></p>
+        <p class="stat" id="PXS"></p>
+        <p class="stat" id="poderClick"></p>
 
-</button>
+        </div>
+        <div class="closediv">
+        <span class="close">cerrar &times;</span>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
 <script src="socket.js"></script>
-<script src="Code3.js"></script>
+<script src="code3.js"></script>
 </body>
 </html>
