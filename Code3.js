@@ -164,11 +164,6 @@ function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
-
-
-
-document.getElementById("import").addEventListener("click", cargado);
-
 document.getElementById("guardar").addEventListener("click", guardado);
 
 document.getElementById("mejora1").addEventListener("click", mejoraunoprecio);
@@ -182,3 +177,5 @@ document.getElementById("mejora4").addEventListener("click", mejoracuatroprecio)
 document.getElementById("mainobj").addEventListener("click", maspuntos);
 
 connect2Server()
+
+cargado()
