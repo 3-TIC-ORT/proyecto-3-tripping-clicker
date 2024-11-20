@@ -5,6 +5,8 @@ let precio1  = 10
 let precio2 = 100
 let precio3 = 1000
 let precio4 = 10000
+let precio5 = 100000
+let precio6 = 1000000
 let clicks = 0
 let dimension = 3
 let puntosD = 0
@@ -17,13 +19,12 @@ function maspuntos() {
     clicks = clicks + 1
     document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
     document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
-    console. log ("pijaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 }
 
 function mejoraunoprecio() {
     if (puntosD >= precio1) {
         puntosD = puntosD - precio1
-        precio1 = precio1 * 1.25
+        precio1 = Math.floor (precio1 * 1.25)
         puntosxs = puntosxs + 0.05
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
@@ -34,8 +35,8 @@ function mejoraunoprecio() {
 function mejoradosprecio() {
     if (puntosD >= precio2) {
         puntosD = puntosD - precio2
-        poderclick = poderclick + 0.5
-        precio2 = precio2 * 1.25
+        poderclick = poderclick + 0.25
+        precio2 = Math.floor (precio2 * 1.25)
         puntosxs = puntosxs + 0.5
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
@@ -45,9 +46,9 @@ function mejoradosprecio() {
 function mejoratresprecio() {
     if (puntosD >= precio3) {
         puntosD = puntosD - precio3
-        poderclick = poderclick
-        precio3 = precio3 * 1.25
-        puntosxs = puntosxs + 5
+        poderclick = poderclick + 3
+        precio3 = Math.floor (precio3 * 1.25)
+        puntosxs = puntosxs + 5.75
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
@@ -56,8 +57,33 @@ function mejoratresprecio() {
 function mejoracuatroprecio() {
     if (puntosD >= precio4) {
         puntosD = puntosD - precio4
-        precio4 = precio4 * 1.25
-        puntosxs = puntosxs + 50
+        poderclick = poderclick + 40
+        precio4 = Math.floor (precio4 * 1.25)
+        puntosxs = puntosxs + 65
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
+    }
+}
+
+function mejoracincoprecio() {
+    if (puntosD >= precio5) {
+        puntosD = puntosD - precio4
+        poderclick = poderclick + 500
+        precio4 = Math.floor (precio4 * 1.25)
+        puntosxs = puntosxs + 700
+        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
+    }
+}
+
+function mejoraseisprecio() {
+    if (puntosD >= precio6) {
+        puntosD = puntosD - precio6
+        poderclick = poderclick + 7500
+        precio4 = Math.floor(precio6 * 1.25)
+        puntosxs = puntosxs + 8000
         document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
@@ -78,8 +104,16 @@ async function bucleinfinito(){
         document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
         document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
         document.getElementById("PXS").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("mejora1").innerHTML = `mejora1 ${precio1}$`
+        document.getElementById("mejora2").innerHTML = `mejora2 ${precio2}$`
+        document.getElementById("mejora3").innerHTML = `planeta corrupto ${precio3}$
+        <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">`
+        document.getElementById("mejora4").innerHTML = `mejora4 ${precio4}$`
+        document.getElementById("mejora5").innerHTML = `mejora5 ${precio5}$`
+        document.getElementById("mejora6").innerHTML = `mejora6 ${precio6}$`
         await delay(500)          
-    }}
+    }
+}
     let num
     function numselect(){
         num = Math.floor(Math.random() * 3) + 1;
@@ -172,6 +206,10 @@ document.getElementById("mejora2").addEventListener("click", mejoradosprecio);
 document.getElementById("mejora3").addEventListener("click", mejoratresprecio);
 
 document.getElementById("mejora4").addEventListener("click", mejoracuatroprecio);
+
+document.getElementById("mejora5").addEventListener("click", mejoracincoprecio);
+
+document.getElementById("mejora6").addEventListener("click", mejoraseisprecio);
 
 document.getElementById("mainobj").addEventListener("click", maspuntos);
 
