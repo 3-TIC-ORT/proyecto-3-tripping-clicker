@@ -39,7 +39,7 @@ function mejoraunoprecio() {
 function mejoradosprecio() {
     if (puntosD >= precio2) {
         puntosD = roundToDecimals(puntosD - precio2, 1)
-        poderclick = poderclick + 0.2
+        poderclick = roundToDecimals(poderclick + 0.2, 1)
         precio2 = Math.ceil (precio2 * 1.15)
         puntosxs = roundToDecimals(puntosxs + 1.1, 1)
         document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
@@ -50,7 +50,7 @@ function mejoradosprecio() {
 function mejoratresprecio() {
     if (puntosD >= precio3) {
         puntosD = roundToDecimals(puntosD - precio3, 1)
-        poderclick = poderclick + 3
+        poderclick = roundToDecimals(poderclick + 3, 1)
         precio3 = Math.ceil (precio3 * 1.15)
         puntosxs = roundToDecimals(puntosxs + 12, 1)
         document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
@@ -61,7 +61,7 @@ function mejoratresprecio() {
 function mejoracuatroprecio() {
     if (puntosD >= precio4) {
         puntosD = roundToDecimals(puntosD - precio4, 1)
-        poderclick = poderclick + 40
+        poderclick = roundToDecimals(poderclick + 40, 1)
         precio4 = Math.ceil (precio4 * 1.15)
         puntosxs = roundToDecimals(puntosxs + 130, 1)
         document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
@@ -73,8 +73,8 @@ function mejoracuatroprecio() {
 function mejoracincoprecio() {
     if (puntosD >= precio5) {
         puntosD = roundToDecimals(puntosD - precio4, 1)
-        poderclick = poderclick + 500
-        precio4 = Math.ceil (precio4 * 1.15)
+        poderclick = roundToDecimals(poderclick + 500, 1)
+        precio5 = Math.ceil (precio5 * 1.15)
         puntosxs = roundToDecimals(puntosxs + 1400, 1)
         document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
@@ -85,8 +85,8 @@ function mejoracincoprecio() {
 function mejoraseisprecio() {
     if (puntosD >= precio6) {
         puntosD = roundToDecimals(puntosD - precio6, 1)
-        poderclick = poderclick + 7500
-        precio4 = Math.ceil(precio6 * 1.15)
+        poderclick = roundToDecimals(poderclick + 7500, 1)
+        precio6 = Math.ceil(precio6 * 1.15)
         puntosxs = roundToDecimals(puntosxs + 16000, 1)
         document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
         document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
@@ -107,13 +107,12 @@ async function bucleinfinito(){
         document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
         document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
         document.getElementById("PXS").innerHTML = `Puntos por segundo: ${puntosxs}`
-        document.getElementById("mejora1").innerHTML = `mejora1 ${precio1}$`
-        document.getElementById("mejora2").innerHTML = `mejora2 ${precio2}$`
-        document.getElementById("mejora3").innerHTML = `planeta corrupto ${precio3}$
-        <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">`
-        document.getElementById("mejora4").innerHTML = `mejora4 ${precio4}$`
-        document.getElementById("mejora5").innerHTML = `mejora5 ${precio5}$`
-        document.getElementById("mejora6").innerHTML = `mejora6 ${precio6}$`
+        document.getElementById("precio1").innerHTML = `${precio1}$`
+        document.getElementById("precio2").innerHTML = `${precio2}$`
+        document.getElementById("precio3").innerHTML = `${precio3}$`
+        document.getElementById("precio4").innerHTML = `${precio4}$`
+        document.getElementById("precio5").innerHTML = `${precio5}$`
+        document.getElementById("precio6").innerHTML = `${precio6}$`
         await delay(1000)          
     }
 }
@@ -148,8 +147,8 @@ function sacar() {
     showstats.style.display = "none";
 }
 
-window.addEventListener('click', hola)
-function hola(event) {
+window.addEventListener('click', cerrado)
+function cerrado(event) {
     if (event.target == statsmnu) {
         showstats.style.display = "none";
     }
@@ -199,6 +198,7 @@ function cargado(){
 function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
+
 
 document.getElementById("guardar").addEventListener("click", guardado);
 

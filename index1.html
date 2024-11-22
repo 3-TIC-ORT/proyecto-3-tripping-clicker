@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trippin clicker</title>
+    <title>Tripping clicker</title>
     <link rel="stylesheet" href="style3.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,23 +15,20 @@
 <div class="arriba">
     <img src="./assets/menuarriba.png" class="menuimg">
 
-    <div class="contadorPMD"><p class="contador1txt">Contador pts Multidimensionales</p></div>
+    <div class="contadorPMD"><p class="contador1txt">Puntos especiales: 0</p></div>
     <div class="mnu">
-        <button class="mnubutton"><p class="exportartxt">Exportar Progreso</p></button>
-        <button id="guardar" class="mnubutton"><p class="guardartxt">Guardar Progreso</p></button>
-    </div>
-    <div class="mnu">
-        <button class="mnubutton" id="import"><p class="importartxt">Importar Progreso</p></button>
+        <button class="mnubutton" id="guardar"><p class="guardar">Guardar Progreso</p></button>
         <button class="mnubutton" id="stats"><p class="statstxt">Estadisticas</p></button>
     </div>
+
     <div class="statsmini">
         <p class="statsminitxt">EESTADISTICAS RESUMIDAS</p>
         <p id="pxs" class="statsminitxt">Puntos por segundo: 0</p>
         <p id="poder" class="statsminitxt">Poder del click: 1</p>
     </div>
-    <div class="logonombre"><p class="logo">logo y nombre del juego</p>
-        <img src="./assets/upgmnuimg.png" class="upgmnuimg">
-    
+    <div class="logonombre">
+        <img src="./assets/b.png" class="bimg">
+        <p class="nombre">Tripping clicker</p>    
     </div> 
 </div>    
 
@@ -49,19 +46,42 @@
 
     </div>
     <div class="columna">
+        <img src="./assets/a.png" class="mejorasimg">
         <div class="mejoras">    
             <div class="menumejoras1">
-                <div class="mejoradiv"><button class="mejora" id="mejora1">mejora1</button></div>
-                <div class="mejoradiv"><button class="mejora" id="mejora3">mejora3</button></div>
-                <div class="mejoradiv"><button class="mejora" id="mejorac1"></button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora1">
+                    mejora 1
+                    <p id="precio1"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">
+                </button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora3">
+                    planeta corrupto
+                    <p id="precio3"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">
+                </button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora5">
+                    mejora 5
+                    <p id="precio5"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">
+                </button></div>
             </div>
             <div class="menumejoras2">
-                <div class="mejoradiv"><button class="mejora" id="mejora2">mejora2</button></div>
-                <div class="mejoradiv"><button class="mejora" id="mejora4">mejora4</button></div>
-                <div class="mejoradiv"><button class="mejora" id="mejorac2"></button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora2">
+                    mejora 2
+                    <p id="precio2"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta">
+                </button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora4">
+                    mejora 4
+                    <p id="precio4"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta"></button></div>
+                <div class="mejoradiv"><button class="mejora" id="mejora6">
+                    mejora 6
+                    <p id="precio6"> </p>
+                    <img src="./assets/planeta.png" alt="imagen de un planeta" class="planeta"></button></div>
             </div>
+        </div>
     </div>
-</div>
 </div>
 <div id="statsmnu" class="statsmnu">
     <div class="statsmnu-content">
@@ -73,7 +93,7 @@
 
         </div>
         <div class="closediv">
-        <span class="close">cerrar &times;</span>
+        <span class="close">cerrar</span>
         </div>
     </div>
 </div>
