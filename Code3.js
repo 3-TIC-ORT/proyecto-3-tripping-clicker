@@ -12,80 +12,84 @@ let dimension = 3
 let puntosD = 0
 
 
+function roundToDecimals(number, decimals) {
+    return Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals);
+}
 
 function maspuntos() {
-    puntosD = puntosD + poderclick
-    puntosT = puntosT + poderclick
+    puntosD = roundToDecimals(puntosD + poderclick, 1)
+    puntosT = roundToDecimals(puntosT + poderclick, 1)
     clicks = clicks + 1
-    document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-    document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
+    document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+    document.getElementById("puntosT").innerHTML = `Puntos totales: ${(puntosT)}`
+    puntosD = roundToDecimals(puntosD, 1)
 }
 
 function mejoraunoprecio() {
     if (puntosD >= precio1) {
-        puntosD = puntosD - precio1
+        puntosD = roundToDecimals(puntosD - precio1, 1)
         precio1 = Math.ceil (precio1 * 1.15)
-        puntosxs = puntosxs + 0.05
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 0.1, 1) 
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 
 function mejoradosprecio() {
     if (puntosD >= precio2) {
-        puntosD = puntosD - precio2
-        poderclick = poderclick + 0.25
+        puntosD = roundToDecimals(puntosD - precio2, 1)
+        poderclick = poderclick + 0.2
         precio2 = Math.ceil (precio2 * 1.15)
-        puntosxs = puntosxs + 0.5
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 1.1, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 function mejoratresprecio() {
     if (puntosD >= precio3) {
-        puntosD = puntosD - precio3
+        puntosD = roundToDecimals(puntosD - precio3, 1)
         poderclick = poderclick + 3
         precio3 = Math.ceil (precio3 * 1.15)
-        puntosxs = puntosxs + 5.75
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 12, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 function mejoracuatroprecio() {
     if (puntosD >= precio4) {
-        puntosD = puntosD - precio4
+        puntosD = roundToDecimals(puntosD - precio4, 1)
         poderclick = poderclick + 40
         precio4 = Math.ceil (precio4 * 1.15)
-        puntosxs = puntosxs + 65
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 130, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 
 function mejoracincoprecio() {
     if (puntosD >= precio5) {
-        puntosD = puntosD - precio4
+        puntosD = roundToDecimals(puntosD - precio4, 1)
         poderclick = poderclick + 500
         precio4 = Math.ceil (precio4 * 1.15)
-        puntosxs = puntosxs + 700
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 1400, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
 
 function mejoraseisprecio() {
     if (puntosD >= precio6) {
-        puntosD = puntosD - precio6
+        puntosD = roundToDecimals(puntosD - precio6, 1)
         poderclick = poderclick + 7500
         precio4 = Math.ceil(precio6 * 1.15)
-        puntosxs = puntosxs + 8000
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        puntosxs = roundToDecimals(puntosxs + 16000, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("pxs").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("poder").innerHTML = `Poder del click: ${poderclick}`
     }
 }
@@ -96,14 +100,13 @@ function delay(timeInMs) {
 
 async function bucleinfinito(){
     while (true) {
-        puntosD = puntosD + puntosxs
-        puntosT = puntosT + puntosxs
-        puntosD = (puntosD)
-        document.getElementById("puntos").innerHTML = `Puntos: ${Math.floor (puntosD)}`
-        document.getElementById("puntosT").innerHTML = `Puntos totales: ${Math.floor (puntosT)}`
+        puntosD = roundToDecimals(puntosD + puntosxs, 1)
+        puntosT = roundToDecimals(puntosT + puntosxs, 1)
+        document.getElementById("puntos").innerHTML = `Puntos: ${puntosD}`
+        document.getElementById("puntosT").innerHTML = `Puntos totales: ${puntosT}`
         document.getElementById("clicksT").innerHTML = `clicks totales: ${clicks}`
         document.getElementById("poderClick").innerHTML = `Poder del click: ${poderclick}`
-        document.getElementById("PXS").innerHTML = `Puntos por segundo: ${puntosxs * 2}`
+        document.getElementById("PXS").innerHTML = `Puntos por segundo: ${puntosxs}`
         document.getElementById("mejora1").innerHTML = `mejora1 ${precio1}$`
         document.getElementById("mejora2").innerHTML = `mejora2 ${precio2}$`
         document.getElementById("mejora3").innerHTML = `planeta corrupto ${precio3}$
@@ -111,7 +114,7 @@ async function bucleinfinito(){
         document.getElementById("mejora4").innerHTML = `mejora4 ${precio4}$`
         document.getElementById("mejora5").innerHTML = `mejora5 ${precio5}$`
         document.getElementById("mejora6").innerHTML = `mejora6 ${precio6}$`
-        await delay(500)          
+        await delay(1000)          
     }
 }
     let num
