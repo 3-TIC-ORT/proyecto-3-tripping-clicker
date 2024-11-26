@@ -116,22 +116,21 @@ async function bucleinfinito(){
         await delay(1000)          
     }
 }
-    let num
+    let num;
     function numselect(){
         num = Math.floor(Math.random() * 3) + 1;
     }
 
     async function cambio(){
     while (true) {
-        await delay(900000)
+        await delay(10000)
         numselect()
         if (num === dimension) {
             numselect()
         }else{
             dimension = num;
             guardar()
-            await delay(3000)
-            window.location.href=`index${num}.html`
+            window.location.href=`index${dimension}.html`;
         }
     }
 }
@@ -217,5 +216,6 @@ document.getElementById("mejora6").addEventListener("click", mejoraseisprecio);
 document.getElementById("mainobj").addEventListener("click", maspuntos);
 
 connect2Server()
+
 
 cargado()
