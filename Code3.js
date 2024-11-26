@@ -11,11 +11,12 @@ let clicks = 0
 let dimension = 3
 let puntosD = 0
 
-
+//funcion de gpt para redondear los eerores del calculo de js
 function roundToDecimals(number, decimals) {
     return Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals);
 }
 
+//funcion que suma puntos en cada click
 function maspuntos() {
     puntosD = roundToDecimals(puntosD + poderclick, 1)
     puntosT = roundToDecimals(puntosT + poderclick, 1)
@@ -25,6 +26,7 @@ function maspuntos() {
     puntosD = roundToDecimals(puntosD, 1)
 }
 
+//funciones que hecen las mejorasa
 function mejoraunoprecio() {
     if (puntosD >= precio1) {
         puntosD = roundToDecimals(puntosD - precio1, 1)
@@ -94,6 +96,7 @@ function mejoraseisprecio() {
     }
 }
 
+//funciones para un bucle asincronico
 function delay(timeInMs) {
     return new Promise(resolve => setTimeout(resolve, timeInMs));
 }
@@ -116,7 +119,9 @@ async function bucleinfinito(){
         await delay(1000)          
     }
 }
+
     let num;
+
     function numselect(){
         num = Math.floor(Math.random() * 3) + 1;
     }
@@ -134,7 +139,9 @@ async function bucleinfinito(){
         }
     }
 }
+cambio()
 
+//modal de las estadisticas 
 const showstats = document.getElementById("statsmnu");
 document.getElementById("stats").addEventListener('click', poner)
 function poner(){
@@ -155,6 +162,7 @@ function cerrado(event) {
 
 sacar()
 
+//rebote del objeto cuando es clickeado
 const mainImg = document.querySelector('.mainimg');
 let imgSize = 60;
 
@@ -172,8 +180,10 @@ document.getElementById('mainobj').addEventListener('mouseup', () => {
     mainImg.style.width = imgSize + '%';
 });
 
-cambio()
+
 bucleinfinito()
+
+//cargado de progreso
 
 function cargado(){
     postData("cargar", {dimension}, (data) => {
@@ -187,18 +197,17 @@ function cargado(){
     precio4 = data.precio4;
     clicks = data.clicks;
     poderclick = data.poderclick;
-
     document.getElementById("puntos").innerHTML = `Puntos: ${data.puntosD}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
   
     });
 }
-
+//guardado
 function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
-
+//botones
 document.getElementById("guardar").addEventListener("click", guardado);
 
 document.getElementById("mejora1").addEventListener("click", mejoraunoprecio);
@@ -215,6 +224,8 @@ document.getElementById("mejora6").addEventListener("click", mejoraseisprecio);
 
 document.getElementById("mainobj").addEventListener("click", maspuntos);
 
+
+//llamado de funcionees
 connect2Server()
 
 
