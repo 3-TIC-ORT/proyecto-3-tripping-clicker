@@ -120,28 +120,6 @@ async function bucleinfinito(){
     }
 }
 
-//cambio de dimension
-    let num
-    function numselect(){
-        num = Math.floor(Math.random() * 3) + 1;
-    }
-
-    async function cambio(){
-    while (true) {
-        await delay(10000)
-        numselect()
-        if (num === dimension) {
-            numselect()
-        }else{
-            dimension = num;
-            guardar()
-            await delay(3000)
-            window.location.href=`index${num}.html`
-        }
-    }
-}
-cambio()
-
 //modal de las estadisticas 
 const showstats = document.getElementById("statsmnu");
 document.getElementById("stats").addEventListener('click', poner)
@@ -207,6 +185,22 @@ function cargado(){
 function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
+
+//cambio de dimension
+let num = dimension
+function numselect(){
+    num = Math.floor(Math.random() * 3) + 1;
+}
+async function cambio(){
+    while (num === dimension) {
+        numselect()
+    }
+        dimension = num;
+        guardado()
+        await delay(1000)
+        window.location.href=`./index${num}.html`;
+}
+setInterval(cambio(), 900)
 
 //botones
 document.getElementById("guardar").addEventListener("click", guardado);

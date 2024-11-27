@@ -3,15 +3,17 @@ body{
     width: 100vw;
     margin: 0px;
     overflow: hidden;
-    font-family: "Rubik Doodle Triangles", system-ui;
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 900;
     font-style: normal;
-    color: #FFDB3F;
+    color: #1586BE;
 }
 button{
-    font-family: "Rubik Doodle Triangles", system-ui;
-    font-weight: 400;
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 900;
     font-style: normal;
-    color: #FFDB3F;
+    color: #1586BE;
+    border-radius: 0%;
 }
 .arriba{  
     height: 15%;
@@ -46,7 +48,7 @@ button{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #61187B;  
+        background-color: #035A8F;  
         margin-right: 15%;     
         align-self: center;
         font-size: 3vh;
@@ -69,7 +71,7 @@ button{
     
     
     .statsmnu-content {
-        background-color: #61187B;
+        background-color: #FFA520;
         border-radius: 0.5vh;
         width: 50%;
         height: 80%;
@@ -80,7 +82,7 @@ button{
 
     }
     .statsdiv{
-        background-color: #782094;
+        background-color: #FFB863;
         height: 60%;
         width: 40%;
         position: absolute;
@@ -164,14 +166,18 @@ button{
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;        
+        justify-content: end;
+        flex-direction: column;
     }
         .mainbuttondiv{
             height: 50%;
             width: 40%;
             z-index: 100;
             transition: width 0.2s, height 0.2s;
+            margin-right: 23vw;
+            margin-bottom: -7vh;
+            position: absolute;
+            
         }
             .mainbutton{
                 height: 100%;
@@ -234,7 +240,7 @@ button{
     width: 100%;
     height: 100%;
     border-radius: 10%;
-    background-color: #61187B;
+    background-color: #035A8F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -261,8 +267,8 @@ button{
     background-repeat: no-repeat;
     width: 25vw;
     height: 16vw;
-    margin-top: -75vh;
-    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-left: 100000000vw;
     position: absolute;
 }
 .edificio{
@@ -282,4 +288,7 @@ z-index: -1;
 }
 .puntos{
     font-size: 5vh;
+    margin-bottom: 60vh;
+    margin-right: 22vw;
+    position: absolute;
 }
