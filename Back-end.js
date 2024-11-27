@@ -8,6 +8,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 1
     if (data.dimension === 1) {
         const guardado = {
+            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
@@ -25,6 +26,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 2
     else if (data.dimension === 2) {
         const guardado2 = {
+            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
@@ -40,6 +42,7 @@ onEvent(`guardar`, (data) => {
     // Guardar progreso de la dimensión 3
     else if (data.dimension === 3) {
         const guardado3 = {
+            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
