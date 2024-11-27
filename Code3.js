@@ -177,7 +177,6 @@ function cargado(){
     precio4 = data.precio4;
     clicks = data.clicks;
     poderclick = data.poderclick;
-    dimension = data.dimension
     document.getElementById("puntos").innerHTML = `Puntos: ${data.puntosD}`
     // En los comandos de abajo poner donde se escribe el valor y lo que se escribe (el valor ya está).
   
@@ -221,9 +220,11 @@ function randomnum(){
 }
 
 async function cambio(){
-    randomnum()
-    await delay(1000)
-    if ( i === dimension )
+    
+    while ( i === dimension){
+        randomnum()
+        await delay(1000)
+    }
     dimension = i
     guardado()
     await delay(1000)
