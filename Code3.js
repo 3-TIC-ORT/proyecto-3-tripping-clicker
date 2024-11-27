@@ -224,8 +224,8 @@ async function cambio(){
     while ( i === dimension){
         await randomnum()
     }
-    await guardado()
     dimension = i
+    await guardado()
     Window.location.href = `./index${dimension}.html`
 }
 
