@@ -8,7 +8,7 @@ let precio4 = 10000
 let precio5 = 100000
 let precio6 = 1000000
 let clicks = 0
-let dimension = 3
+let dimension
 let puntosD = 0
 
 
@@ -187,21 +187,6 @@ function guardado() {
     postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
 }
 
-//cambio de dimension
-let num = dimension
-function numselect(){
-    num = Math.floor(Math.random() * 3) + 1;
-}
-async function cambio(){
-    while (num === dimension) {
-        numselect()
-    }
-        dimension = num;
-        guardado()
-        await delay(1000)
-        window.location.href=`./index${num}.html`;
-}
-setInterval(cambio(), 900)
 
 //botones
 document.getElementById("guardar").addEventListener("click", guardado);
@@ -224,5 +209,22 @@ document.getElementById("mainobj").addEventListener("click", maspuntos);
 //llamado de funcionees
 connect2Server()
 
-
 cargado()
+
+
+//cambio de dimension
+let i = dimension
+
+function randomnum(){
+    i = Math.floor(Math.random() * 3) + 1;
+}
+
+async function cambio(){
+    randomnum()
+    if ( i === dimension )
+    dimension = i
+    guardado()
+    Window.location.href = `./index${dimension}.html`
+}
+
+setInterval(cambio(), 900)
