@@ -11,6 +11,7 @@ let clicks = 0
 let dimension = 3
 let puntosD = 0
 
+
 //funcion de gpt para redondear los eerores del calculo de js
 function roundToDecimals(number, decimals) {
     return Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals);
@@ -222,5 +223,6 @@ document.getElementById("mainobj").addEventListener("click", maspuntos);
 
 //llamado de funcionees
 connect2Server()
+
 
 cargado()
