@@ -220,11 +220,11 @@ function randomnum(){
 }
 
 async function cambio(){
-    randomnum()
+    await randomnum()
     if ( i === dimension )
     dimension = i
-    guardado()
+    await guardado()
     Window.location.href = `./index${dimension}.html`
 }
 
-setInterval(cambio(), 900)
+setInterval(cambio(), 5000)
