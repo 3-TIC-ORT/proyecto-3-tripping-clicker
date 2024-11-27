@@ -2,13 +2,18 @@ import fs from "fs";
 import { onEvent, startServer } from "soquetic";
 
 let progreso = []
+let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
 
 // Guardar
 onEvent(`guardar`, (data) => {
+    const demenciasion = {
+        "dimension": data.dimension
+    }
+
+    fs.writeFileSync(`./Datos/dimension.json`,JSON.stringify(demenciasion, null, 2), "utf8");
     // Guardar progreso de la dimensión 1
-    if (data.dimension === 1) {
+    if (demencia.dimension === 1) {
         const guardado = {
-            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
@@ -18,15 +23,13 @@ onEvent(`guardar`, (data) => {
             "precio4": data.precio4,
             "clicks": data.clicks,
             "poderclick": data.poderclick,
-
         }; 
         fs.writeFileSync(`./Datos/Guardado.json`, JSON.stringify(guardado, null, 2), "utf8");
 
     }
     // Guardar progreso de la dimensión 2
-    else if (data.dimension === 2) {
+    else if (demencia.dimension === 2) {
         const guardado2 = {
-            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
@@ -40,9 +43,8 @@ onEvent(`guardar`, (data) => {
         fs.writeFileSync(`./Datos/Guardado2.json`, JSON.stringify(guardado2, null, 2), "utf8");
     }
     // Guardar progreso de la dimensión 3
-    else if (data.dimension === 3) {
+    else if (demencia.dimension === 3) {
         const guardado3 = {
-            "dimension": data.dimension,
             "puntosD": data.puntosD,
             "puntosTot": data.puntosT,
             "puntosXsegundo": data.puntosxs,
@@ -64,17 +66,17 @@ onEvent(`guardar`, (data) => {
 // Exportar
 onEvent("cargar", (data) => {
     // Cargar progreso de la dimensión 1
-    if (data.dimension === 1) {
+    if (demencia.dimension === 1) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`, "utf8"));
         return progreso
     }
     // Cargar progreso de la dimensión 2
-    else if (data.dimension === 2) {
+    else if (demencia.dimension === 2) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
         return progreso
     }
     // Cargar progreso de la dimensión 3
-    else if (data.dimension === 3) {
+    else if (demencia.dimension === 3) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
         return progreso
     } else {

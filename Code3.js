@@ -8,7 +8,7 @@ let precio4 = 10000
 let precio5 = 100000
 let precio6 = 1000000
 let clicks = 0
-let dimension
+let dimension = 3
 let puntosD = 0
 
 
@@ -166,7 +166,7 @@ bucleinfinito()
 //cargado de progreso
 
 function cargado(){
-    postData("cargar", {dimension}, (data) => {
+    postData("cargar", (data) => {
     console.log(data)
     puntosD = data.puntosD;
     puntosT = data.puntosTot;
@@ -221,11 +221,13 @@ function randomnum(){
 }
 
 async function cambio(){
-    await randomnum()
+    randomnum()
+    await delay(1000)
     if ( i === dimension )
     dimension = i
-    await guardado()
-    Window.location.href = `./index${dimension}.html`
+    guardado()
+    await delay(1000)
+    window.location.href = `./index${dimension}.html`
 }
 
 setInterval(cambio(), 5000)
