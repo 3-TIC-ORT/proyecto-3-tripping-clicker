@@ -10,6 +10,7 @@ let precio6 = 1000000
 let clicks = 0
 let dimension = 3
 let puntosD = 0
+let puntosE = 0
 
 
 //funcion de gpt para redondear los eerores del calculo de js
@@ -214,21 +215,26 @@ cargado()
 
 //cambio de dimension
 let i = dimension
+let minut = 0
 
 function randomnum(){
     i = Math.floor(Math.random() * 3) + 1;
 }
 
 async function cambio(){
-    
+    while (minut > 15 ){
+        await delay(60000)
+        minut = minut-1
+    }
+
     while ( i === dimension){
         randomnum()
         await delay(1000)
     }
     dimension = i
+    minut = 0
     guardado()
     await delay(1000)
     window.location.href = `./index${dimension}.html`
 }
-
-setInterval(cambio(), 5000)
+cambio()

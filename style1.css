@@ -3,15 +3,16 @@ body{
     width: 100vw;
     margin: 0px;
     overflow: hidden;
-    font-family: "Rubik Doodle Triangles", system-ui;
+    font-family: "Rubik Bubbles", system-ui;
     font-style: normal;
-    color: #FFDB3F;
+    color: #639117;
+    background-color: #AAEEDD;
 }
 button{
-    font-family: "Rubik Doodle Triangles", system-ui;
+    font-family: "Rubik Bubbles", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: #FFDB3F;
+    color: #639117;
 }
 .arriba{  
     height: 15%;
@@ -46,7 +47,7 @@ button{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #61187B;  
+        background-color: #22310A;
         margin-right: 15%;     
         align-self: center;
         font-size: 3vh;
@@ -69,7 +70,7 @@ button{
     
     
     .statsmnu-content {
-        background-color: #61187B;
+        background-color: #639117;
         border-radius: 0.5vh;
         width: 50%;
         height: 80%;
@@ -77,10 +78,9 @@ button{
         z-index: 9999999999999999999;
         justify-self: center;
         overflow: hidden;
-
     }
     .statsdiv{
-        background-color: #782094;
+        background-color: #22310A;
         height: 60%;
         width: 40%;
         position: absolute;
@@ -105,7 +105,7 @@ button{
 
 
     .close {
-        font-family: "Rubik Doodle Triangles", system-ui;
+        font-family: "Rubik bubble Triangles", system-ui;
         font-size: 5vh;
         font-style: normal;
         color: #FFDB3F;
@@ -172,6 +172,7 @@ button{
             width: 40%;
             z-index: 100;
             transition: width 0.2s, height 0.2s;
+            margin-top: 46vh;
         }
             .mainbutton{
                 height: 100%;
@@ -234,7 +235,7 @@ button{
     width: 100%;
     height: 100%;
     border-radius: 10%;
-    background-color: #61187B;
+    background-color: #22310A;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,16 +256,7 @@ button{
     border-color: rgba(255, 255, 255, 0);
     margin-bottom: 20%;
 }
-.constelacion{
-    background-image: url(./assets/constelacion.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 16vw;
-    margin-top: -75vh;
-    margin-left: 10vw;
-    position: absolute;
-}
+
 .edificio{
 position: absolute;
 height: 60vh;
@@ -282,4 +274,5 @@ z-index: -1;
 }
 .puntos{
     font-size: 5vh;
+    position: absolute;
 }
