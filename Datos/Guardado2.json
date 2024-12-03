@@ -1,11 +1,20 @@
 {
+<<<<<<< Updated upstream
   "puntosD": 13,
   "puntosTot": 13,
+=======
+  "puntosD": 22,
+  "puntosTot": 22,
+>>>>>>> Stashed changes
   "puntosXsegundo": 0,
   "precio1": 10,
   "precio2": 100,
   "precio3": 1000,
   "precio4": 10000,
+<<<<<<< Updated upstream
   "clicks": 13,
+=======
+  "clicks": 22,
+>>>>>>> Stashed changes
   "poderclick": 1
 }

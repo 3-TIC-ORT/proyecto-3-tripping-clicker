@@ -234,7 +234,7 @@ async function cambio(){
     dimension = i
     minut = 0
     guardado()
-    await delay(1000)
+    await delay(100000)
     window.location.href = `./index${dimension}.html`
 }
 cambio()
