@@ -2,11 +2,10 @@ import fs from "fs";
 import { onEvent, startServer } from "soquetic";
 
 let progreso = []
+let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
 
 // Guardar
 onEvent(`guardar`, (data) => {
-
-    let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
 
     const demenciasion = {
         "dimension": data.dimension
