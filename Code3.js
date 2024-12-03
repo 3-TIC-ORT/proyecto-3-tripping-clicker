@@ -229,7 +229,7 @@ async function cambio(){
 
     while ( i === dimension){
         randomnum()
-        await delay(1000)
+        await delay(100000)
     }
     dimension = i
     minut = 0
