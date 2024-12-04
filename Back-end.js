@@ -2,10 +2,12 @@ import fs from "fs";
 import { onEvent, startServer } from "soquetic";
 
 let progreso = []
-let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
 
 // Guardar
 onEvent(`guardar`, (data) => {
+
+    let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
+    console.log(demencia)
 
     const demenciasion = {
         "dimension": data.dimension
@@ -65,19 +67,19 @@ onEvent(`guardar`, (data) => {
 });
 
 // Exportar
-onEvent("cargar", () => {
+onEvent("cargar", (data) => {
     // Cargar progreso de la dimensión 1
-    if (demencia.dimension === 1) {
+    if (data.dimension === 1) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
         return progreso
     }
     // Cargar progreso de la dimensión 2
-    else if (demencia.dimension === 2) {
+    else if (data.dimension === 2) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
         return progreso
     }
     // Cargar progreso de la dimensión 3
-    else if (demencia.dimension === 3) {
+    else if (data.dimension === 3) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
         return progreso
     } else {
