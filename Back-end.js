@@ -75,24 +75,29 @@ onEvent(`guardar`, (data) => {
 });
 
 // Exportar
-onEvent("cargar", (data) => {
-    let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
-    let progreso = [];
+onEvent("cargar", () => {
+    let progreso = {
+        valor1,
+        valor2,
+    };
     // Cargar progreso de la dimensión 1
     if (demencia.dimension === 1) {
-        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
+        progreso.valor1 = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
+        progreso.valor2 = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
         console.log("1")
         return progreso
     }
     // Cargar progreso de la dimensión 2
     else if (demencia.dimension === 2) {
-        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
+        progreso.valor1 = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
+        progreso.valor2 = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`, "utf8"));
         console.log("2")
         return progreso
     }
     // Cargar progreso de la dimensión 3
     else if (demencia.dimension === 3) {
-        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
+        progreso.valor1 = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
+        progreso.valor2 = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`, "utf8"));
         console.log("3")
         return progreso
     } else {
