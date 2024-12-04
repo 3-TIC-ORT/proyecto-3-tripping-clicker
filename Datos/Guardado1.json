@@ -1,11 +1,11 @@
 {
-    "puntosD": 0,
-    "puntosTot": 0,
-    "puntosXsegundo": 0,
-    "precio1": 10,
-    "precio2": 100,
-    "precio3": 1000,
-    "precio4": 10000,
-    "clicks": 0,
-    "poderclick": 1
+  "puntosD": 0,
+  "puntosTot": 0,
+  "puntosXsegundo": 0,
+  "precio1": 10,
+  "precio2": 100,
+  "precio3": 1000,
+  "precio4": 10000,
+  "clicks": 0,
+  "poderclick": 1
 }
