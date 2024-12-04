@@ -227,14 +227,14 @@ async function cambio(){
         minut = minut-1
     }
 
-    while ( i === dimension){
+    while (i === dimension){
         randomnum()
         await delay(30000)
     }
     dimension = i
     minut = 0
     guardado()
-    await delay(100000)
+    await delay(30000)
     window.location.href = `./index${dimension}.html`
 }
 cambio()

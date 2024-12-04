@@ -25,7 +25,7 @@ onEvent(`guardar`, (data) => {
             "clicks": data.clicks,
             "poderclick": data.poderclick,
         }; 
-        fs.writeFileSync(`./Datos/Guardado.json`, JSON.stringify(guardado, null, 2), "utf8");
+        fs.writeFileSync(`./Datos/Guardado1.json`, JSON.stringify(guardado, null, 2), "utf8");
 
     }
     // Guardar progreso de la dimensión 2
@@ -68,7 +68,7 @@ onEvent(`guardar`, (data) => {
 onEvent("cargar", () => {
     // Cargar progreso de la dimensión 1
     if (demencia.dimension === 1) {
-        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`, "utf8"));
+        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
         return progreso
     }
     // Cargar progreso de la dimensión 2
