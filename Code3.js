@@ -167,7 +167,7 @@ bucleinfinito()
 //cargado de progreso
 
 function cargado(){
-    postData("cargar", (data) => {
+    postData("cargar",{},(data) => {
     console.log(data)
     puntosD = data.puntosD;
     puntosT = data.puntosTot;
@@ -185,7 +185,7 @@ function cargado(){
 }
 //guardado
 function guardado() {
-    postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4})
+    postData(`guardar`,{dimension, puntosD, puntosT, puntosxs, clicks, poderclick, precio1, precio2, precio3, precio4});
 }
 
 
@@ -229,7 +229,7 @@ async function cambio(){
 
     while ( i === dimension){
         randomnum()
-        await delay(100000)
+        await delay(30000)
     }
     dimension = i
     minut = 0

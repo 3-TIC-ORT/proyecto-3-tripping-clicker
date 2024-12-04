@@ -65,7 +65,7 @@ onEvent(`guardar`, (data) => {
 });
 
 // Exportar
-onEvent("cargar", (data) => {
+onEvent("cargar", () => {
     // Cargar progreso de la dimensión 1
     if (demencia.dimension === 1) {
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado.json`, "utf8"));
