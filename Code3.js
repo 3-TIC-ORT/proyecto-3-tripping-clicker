@@ -169,7 +169,7 @@ bucleinfinito()
 function cargado(){
     postData("cargar", {dimension} ,(data) => {
     console.log(data)
-    dimension = 
+    dimension = dimension.data;
     puntosD = data.puntosD;
     puntosT = data.puntosTot;
     puntosxs = data.puntosXsegundo;
@@ -245,10 +245,8 @@ async function cambio(){
         randomnum()
         await delay(0)
     }
-    console.log("i")
-    console.log(i)
-    console.log("dimension")
-    console.log(dimension)
+    console.log(`i ${i}`)
+    console.log(`dimension ${dimension}`)
     dimension = i
     guardado()
     await delay(0)

@@ -49,4 +49,4 @@ while (i >= 35){
     if (document.getElementById(i).value > 0){
     puntos = puntos + document.getElementById.value * 36
     }
-}
+} 
