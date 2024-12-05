@@ -166,14 +166,9 @@ bucleinfinito()
 
 //cargado de progreso
 
-function cargado(){
-    postData("cargar", {dimension} ,(data) => {
+function cargado() {
+    postData("cargar", {dimension}, (data) => {
     console.log(data)
-<<<<<<< Updated upstream
-    dimension = dimension.data;
-=======
-    dimension = data.dimension
->>>>>>> Stashed changes
     puntosD = data.puntosD;
     puntosT = data.puntosTot;
     puntosxs = data.puntosXsegundo;
@@ -190,6 +185,13 @@ function cargado(){
   
     });
 }
+
+function cargado2() {
+    postdata("cargar2", {dimension}, (data) => {
+        dimension = data.dimension
+    })
+}
+
 //guardado
 function guardado() {
     postData(`guardar`,{ 
@@ -231,6 +233,7 @@ document.getElementById("mainobj").addEventListener("click", maspuntos);
 connect2Server()
 
 cargado()
+cargado2()
 
 
 //cambio de dimension

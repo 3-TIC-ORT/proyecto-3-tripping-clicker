@@ -79,30 +79,19 @@ onEvent("cargar", () => {
     let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
     // Cargar progreso de la dimensión 1
     if (demencia.dimension === 1) {
-<<<<<<< Updated upstream
         progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
-        progreso = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
-=======
-        let algo = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`,"utf-8"));
-        progreso = { demencia, algo}
-        progreso = { demencia, algo}        
->>>>>>> Stashed changes
         console.log("1")
         return progreso
     }
     // Cargar progreso de la dimensión 2
     else if (demencia.dimension === 2) {
-        let algo = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`,"utf-8"));
-        progreso = { demencia, algo}
-        progreso = { demencia, algo}
+        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado2.json`,"utf-8"));
         console.log("2")
         return progreso
     }
     // Cargar progreso de la dimensión 3
     else if (demencia.dimension === 3) {
-        let algo = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`,"utf-8"));
-        progreso = { demencia, algo}
-        progreso = { demencia, algo}
+        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado3.json`,"utf-8"));
         console.log("3")
         return progreso
     } else {
@@ -111,5 +100,10 @@ onEvent("cargar", () => {
 
     return progreso;
 });
+
+onEvent("cargar2", () => {
+    let demencia = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
+    return demencia
+ });
 
 startServer();
