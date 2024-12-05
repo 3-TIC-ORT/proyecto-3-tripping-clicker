@@ -187,7 +187,7 @@ function cargado() {
 }
 
 function cargado2() {
-    postdata("cargar2", {dimension}, (data) => {
+    postData("cargar2", {dimension}, (data) => {
         dimension = data.dimension
     })
 }
@@ -249,14 +249,15 @@ async function cambio(){
         await delay(10000)
     while (i === dimension){
         randomnum()
-        await delay(0)
+        console.log("algo")
+        await delay(1000)
     }
     console.log(`i ${i}`)
     console.log(`dimension ${dimension}`)
     dimension = i
     guardado()
-    await delay(0)
-    window.location.href = `./index${dimension}.html`
+    await delay(50000000)
+    window.location.href = `./index${i}.html`
 }
 
 cambio()
