@@ -82,8 +82,8 @@ onEvent("cargar", () => {
     };
     // Cargar progreso de la dimensión 1
     if (demencia.dimension === 1) {
-        progreso.valor1 = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
-        progreso.valor2 = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
+        progreso = JSON.parse(fs.readFileSync(`./Datos/Guardado1.json`, "utf8"));
+        progreso = JSON.parse(fs.readFileSync(`./Datos/dimension.json`,"utf8"));
         console.log("1")
         return progreso
     }
