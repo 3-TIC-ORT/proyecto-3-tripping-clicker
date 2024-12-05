@@ -169,12 +169,15 @@ bucleinfinito()
 function cargado(){
     postData("cargar", {dimension} ,(data) => {
     console.log(data)
+<<<<<<< Updated upstream
     dimension = dimension.data;
+=======
+    dimension = data.dimension
+>>>>>>> Stashed changes
     puntosD = data.puntosD;
     puntosT = data.puntosTot;
     puntosxs = data.puntosXsegundo;
     precio1 = data.precio1;
-
     precio2 = data.precio2;
     precio3 = data.precio3;
     precio4 = data.precio4;

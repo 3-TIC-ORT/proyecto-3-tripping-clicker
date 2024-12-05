@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "puntosD": 0,
   "puntosTot": 0,
   "puntosXsegundo": 0,
@@ -10,4 +11,8 @@
   "precio6": 1000000,
   "clicks": 0,
   "poderclick": 1
+=======
+  "puntosD": null,
+  "puntosTot": null
+>>>>>>> Stashed changes
 }
